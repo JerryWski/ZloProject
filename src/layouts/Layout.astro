@@ -1,37 +1,57 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pl">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='pl'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Montez&family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'
+      rel='stylesheet'
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style is:global>
-	:root {
-		margin: 0;
-		padding: 0%;
-		box-sizing: border-box;
-		font-size: 16px;
-	}
-	html {
-		
-	}
-	code {
-		
-	}
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    font-size: 16px;
+    background: rgb(32, 26, 48);
+    background: linear-gradient(
+      13deg,
+      rgba(32, 26, 48, 1) 0%,
+      rgba(39, 29, 47, 1) 0%,
+      rgba(40, 30, 50, 1) 8%,
+      rgba(38, 29, 59, 1) 100%
+    );
+    /* main colors */
+    --base-orange: hsl(22, 100%, 60%);
+    --base-white: hsl(0, 0%, 100%);
+    /* fonts */
+    --main-fnt: 'Roboto', sans-serif;
+    --second-fnt: 'Montserrat', sans-serif;
+  }
+  html {
+  }
+  code {
+  }
 </style>
