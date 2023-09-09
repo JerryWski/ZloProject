@@ -45,16 +45,16 @@ const Header: React.FC = () => {
         )}
         {toggle && !matches && (
           <div className='nav-links'>
-            <a className='link' href='/consulting'>
+            <a className='link-mobile' href='/consulting'>
               Consulting
             </a>
-            <a className='link' href='/strategy'>
+            <a className='link-mobile' href='/strategy'>
               Strategie
             </a>
-            <a className='link' href='/acacdemy'>
+            <a className='link-mobile' href='/acacdemy'>
               Akademia
             </a>
-            <a className='link' href='/cooperate'>
+            <a className='link-mobile' href='/cooperate'>
               Współpraca
             </a>
           </div>

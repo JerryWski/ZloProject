@@ -13,6 +13,7 @@
   display: flex;
   gap: 55px;
   align-items: center;
+  font-family: var(--second-font);
 }
 .nav-links {
   position: fixed;
@@ -21,19 +22,24 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
+  background: rgba(38, 17, 58, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* background-image: linear-gradient(to top, #151220 10%, #2a233e 100%); */
   justify-content: center;
   align-items: center;
   font-family: var(--second-font);
   gap: 80px;
   flex-direction: column;
 }
-.link {
+.link, .link-mobile {
   text-decoration: none;
-  color: var(--base-orange);
+  color: var(--base-white);
   font-size: 1rem;
 }
-
+.link-mobile {
+  color: var(--base-orange);
+}
 .heading,
 .span_hash {
   text-align: left;
