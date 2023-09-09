@@ -36,7 +36,7 @@ const { heading = 'Aloha!' } = Astro.props as Props;
   .subheader {
     text-transform: uppercase;
     margin-top: 45px;
-    text-align: left;
+    text-align: center;
     padding: 15px 25px;
     font-size: clamp(1.8rem, 2vw, 4rem);
     font-family: var(--main-font);
@@ -44,13 +44,15 @@ const { heading = 'Aloha!' } = Astro.props as Props;
     font-weight: 500;
   }
   .text {
+    max-width: 400px;
+    margin: auto;
     margin-top: 40px;
     font-size: 1rem;
     color: var(--base-white);
     letter-spacing: 1px;
     line-height: 2rem;
     padding-inline: 25px;
-    text-align: left;
+    text-align: center;
     font-family: var(--second-font);
   }
   span {
@@ -80,7 +82,7 @@ const { heading = 'Aloha!' } = Astro.props as Props;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px 0 15px 25px;
+    margin: 25px auto 25px auto;
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--base-white);
@@ -88,6 +90,7 @@ const { heading = 'Aloha!' } = Astro.props as Props;
     border: 1px solid var(--base-white);
     background: var(--base-orange);
     border-radius: 7px;
-
+    font-family: var(--second-font);
+    text-transform: uppercase;
   }
 </style>
