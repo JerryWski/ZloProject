@@ -10,11 +10,12 @@
     background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
     background-repeat: no-repeat;
     /* main colors */
-    --base-orange: hsl(22, 100%, 60%);
+    --base-orange: #ff7e33;
     --base-white: hsl(0, 0%, 100%);
     /* fonts */
     --main-font: 'Roboto', sans-serif;
     --second-font: 'Montserrat', sans-serif;
+    --fancy-font: 'Montez', cursive;
   }
   html {
     min-height: 100vh;

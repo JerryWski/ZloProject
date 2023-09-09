@@ -6,13 +6,12 @@ import { motion } from 'framer-motion';
 const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false);
   const matches = useMediaQuery('(min-width: 768px)');
-  console.log(matches);
   return (
     <header>
       <nav className='nav-container'>
         <div className='logo-container'>
           <p className='heading'>
-            <span className='span_hash'>#</span>Coach SamoZło
+            <span className='span_hash'>#</span>CoachSamoZło
           </p>
           <p className='subheading'>Make's a difference</p>
         </div>
@@ -40,20 +39,27 @@ const Header: React.FC = () => {
             className='hamburger'
           >
             <motion.span
-            animate={{rotateZ: toggle ? 45 : 0, y: toggle ? 8 : 0}}
-             className='burger-line'></motion.span>
+              animate={{ rotateZ: toggle ? 45 : 0, y: toggle ? 8 : 0 }}
+              className='burger-line'
+            ></motion.span>
             <motion.span
-            animate={{width: toggle ? 0 : 32}}
-             className='burger-line'></motion.span>
+              animate={{ width: toggle ? 0 : 32 }}
+              className='burger-line'
+            ></motion.span>
             <motion.span
-            animate={{rotateZ: toggle ? -45 : 0, y: toggle ? -8 : 0, width: toggle ? 34 : 30}}
-             className='burger-line'></motion.span>
+              animate={{
+                rotateZ: toggle ? -45 : 0,
+                y: toggle ? -8 : 0,
+                width: toggle ? 34 : 30,
+              }}
+              className='burger-line'
+            ></motion.span>
           </div>
         )}
         {toggle && !matches && (
           <motion.div
             animate={{ opacity: 1, x: 0 }}
-            transition={{stiffness: 50 }}
+            transition={{ stiffness: 50 }}
             initial={{ opacity: 0, x: 45 }}
             className='nav-links'
           >

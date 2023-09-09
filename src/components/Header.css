@@ -52,7 +52,7 @@
 }
 .subheading {
   color: var(--base-orange);
-  font-family: 'Montez', cursive;
+  font-family: var(--fancy-font);
   font-weight: 300;
   font-size: clamp(1rem, 2.5vw, 2rem);
   line-height: 1rem;
