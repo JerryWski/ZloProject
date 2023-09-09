@@ -43,7 +43,7 @@ const Header: React.FC = () => {
             animate={{rotateZ: toggle ? 45 : 0, y: toggle ? 8 : 0}}
              className='burger-line'></motion.span>
             <motion.span
-            animate={{opacity: toggle ? 0 : 1}}
+            animate={{width: toggle ? 0 : 32}}
              className='burger-line'></motion.span>
             <motion.span
             animate={{rotateZ: toggle ? -45 : 0, y: toggle ? -8 : 0, width: toggle ? 34 : 30}}
