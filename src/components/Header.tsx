@@ -9,22 +9,29 @@ const Header: React.FC = () => {
   return (
     <header>
       <nav className='nav-container'>
-
         <div className='logo-container'>
           <p className='heading'>
             <span className='span_hash'>#</span>Coach SamoZło
           </p>
           <p className='subheading'>Make's a difference</p>
         </div>
-
-        <div className='list-wrapper'>
-          <ul className='lists-mobile'>
-            <li>Consulting</li>
-            <li>Strategie</li>
-            <li>Akademia</li>
-            <li>Współpraca</li>
-          </ul>
-        </div>
+        {/* check if we are on mobile or not */}
+        {matches && (
+          <div className='nav-links-mobile'>
+            <a className='link' href='/consulting'>
+              Consulting
+            </a>
+            <a className='link' href='/strategy'>
+              Strategie
+            </a>
+            <a className='link' href='/acacdemy'>
+              Akademia
+            </a>
+            <a className='link' href='/cooperate'>
+              Współpraca
+            </a>
+          </div>
+        )}
 
         {!matches && (
           <div
@@ -36,7 +43,22 @@ const Header: React.FC = () => {
             <span className='burger-line'></span>
           </div>
         )}
-        
+        {toggle && !matches && (
+          <div className='nav-links'>
+            <a className='link' href='/consulting'>
+              Consulting
+            </a>
+            <a className='link' href='/strategy'>
+              Strategie
+            </a>
+            <a className='link' href='/acacdemy'>
+              Akademia
+            </a>
+            <a className='link' href='/cooperate'>
+              Współpraca
+            </a>
+          </div>
+        )}
       </nav>
     </header>
   );
