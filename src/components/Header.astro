@@ -4,13 +4,17 @@ const navItems = ['Consulting', 'Strategie', 'Academy', 'Współpraca'];
 
 
 <header>
-  <div class='logo-container'>
-    <h1 class='heading'><span class='span_hash'>#</span>Coach SamoZło</h1>
-    <h3 class='subheading'>Make's a diffrence</h3>
-  </div>
-  <ul>
-    {navItems.map((items) => <li>{items}</li>)}
-  </ul>
+  <nav class="nav-container">
+    <div class='logo-container'>
+      <h1 class='heading'><span class='span_hash'>#</span>Coach SamoZło</h1>
+      <h3 class='subheading'>Make's a difference</h3>
+    </div>
+    <div class="list-wrapper">
+      <ul class="lists-mobile">
+        {navItems.map((items) => <li>{items}</li>)}
+      </ul>
+    </div>
+  </nav>
 </header>
 
 <style>
@@ -19,9 +23,21 @@ const navItems = ['Consulting', 'Strategie', 'Academy', 'Współpraca'];
     text-align: left;
     font-family: var(--main-font);
   }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
   .logo-container {
     max-width: 320px;
     padding: 10px;
+  }
+  .lists-mobile {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: var(--base-orange);
+    display: none;
   }
   .heading {
     color: var(--base-white);
@@ -40,6 +56,6 @@ const navItems = ['Consulting', 'Strategie', 'Academy', 'Współpraca'];
 
   .span_hash {
     color: var(--base-orange);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
   }
 </style>
