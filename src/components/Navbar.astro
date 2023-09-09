@@ -1,25 +1,39 @@
 ---
-
+const navItems = ['Consulting', 'Strategie', 'Academy', 'Współpraca'];
 ---
 
-<h1 class='heading'><span class="span_hash">#</span>Coach SameZło</h1>
-<h3 class="subheading">Make's a diffrence</h3>
+
+<header>
+  <div class='logo-container'>
+    <h1 class='heading'><span class='span_hash'>#</span>Coach SamoZło</h1>
+    <h3 class='subheading'>Make's a diffrence</h3>
+  </div>
+  <ul>
+    {navItems.map((items) => <li>{items}</li>)}
+  </ul>
+</header>
 
 <style>
-    h1,span {
-        font-family: var(--main-fnt);
-    }
+  h1,
+  span {
+    text-align: left;
+    font-family: var(--main-font);
+  }
+  .logo-container {
+    max-width: 320px;
+    padding: 10px;
+  }
   .heading {
     color: var(--base-white);
     font-weight: 700;
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 3vw, 2.3rem);
   }
   .subheading {
     color: var(--base-orange);
     font-family: 'Montez', cursive;
     font-weight: 300;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 1rem;
     font-style: italic;
     letter-spacing: 3px;
   }
