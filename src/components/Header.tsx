@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
 import { useMediaQuery } from '../utils/useMediaQuery';
+import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -38,13 +39,24 @@ const Header: React.FC = () => {
             onClick={() => setToggle((prevToggle) => !prevToggle)}
             className='hamburger'
           >
-            <span className='burger-line'></span>
-            <span className='burger-line'></span>
-            <span className='burger-line'></span>
+            <motion.span
+            animate={{rotateZ: toggle ? 45 : 0, y: toggle ? 8 : 0}}
+             className='burger-line'></motion.span>
+            <motion.span
+            animate={{opacity: toggle ? 0 : 1}}
+             className='burger-line'></motion.span>
+            <motion.span
+            animate={{rotateZ: toggle ? -45 : 0, y: toggle ? -8 : 0, width: toggle ? 34 : 30}}
+             className='burger-line'></motion.span>
           </div>
         )}
         {toggle && !matches && (
-          <div className='nav-links'>
+          <motion.div
+            animate={{ opacity: 1, x: 0 }}
+            transition={{stiffness: 50 }}
+            initial={{ opacity: 0, x: 45 }}
+            className='nav-links'
+          >
             <a className='link-mobile' href='/consulting'>
               Consulting
             </a>
@@ -57,7 +69,7 @@ const Header: React.FC = () => {
             <a className='link-mobile' href='/cooperate'>
               Współpraca
             </a>
-          </div>
+          </motion.div>
         )}
       </nav>
     </header>

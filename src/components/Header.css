@@ -71,6 +71,7 @@
   align-content: center;
   gap: 7px;
   cursor: pointer;
+  padding: 10px;
   z-index: 100;
 }
 .burger-line:nth-child(1) {
@@ -88,7 +89,7 @@
 .burger-line:nth-child(3) {
   background: #ffffff;
   width: 30px;
-  height: 0.5px;
+  height: 1px;
   display: block;
 }
 
