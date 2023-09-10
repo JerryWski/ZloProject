@@ -11,7 +11,7 @@ const Header: React.FC = () => {
       <nav className='nav-container'>
         <div className='logo-container'>
           <p className='heading'>
-            <span className='span_hash'>#</span>CoachSamoZło
+            <span className='span_hash'>#</span>CoachSamoZuo
           </p>
           <p className='subheading'>Make's a difference</p>
         </div>
