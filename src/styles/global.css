@@ -10,8 +10,9 @@
     background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
     background-repeat: no-repeat;
     /* main colors */
-    --base-orange: #ff7e33;
+    --base-orange: hsl(22, 100%, 60%);
     --base-white: hsl(0, 0%, 100%);
+    --base-grey: hsl(0, 7%, 76%);
     /* fonts */
     --main-font: 'Roboto', sans-serif;
     --second-font: 'Montserrat', sans-serif;

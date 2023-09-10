@@ -13,16 +13,22 @@ const { heading = 'Aloha!' } = Astro.props as Props;
     <img class='image' src='./src/images/m_m_2_mobile.png' alt='man' />
   </div>
   <h2 class='subheader'>
-    <span>Co robi na codzień</span><span> #</span>CoachSamoZuo?
+    <span>Maciej Martowicz</span><span> #</span>CoachSamoZuo
   </h2>
+  <h3 class='text-header'>Co robię na codzień?</h3>
   <p class='text'>
     Zajmuję się projektowaniem <span>strategii MARKETINGOWYCH</span> , <span>
       strategii BRANDINGOWYCH
     </span> ( strategii marki ) oraz <span>strategii SPRZEDAŻOWYCH</span> dla
     firm i biznesu B2B, B2B2C i B2C.
   </p>
+  <p class='text'>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ipsum
+    nisi soluta nostrum accusamus labore nam temporibus! Cupiditate laboriosam
+    veniam quo unde inventore tenetur vel asperiores amet officia.
+    Necessitatibus, cumque.
+  </p>
   <a href='/' class='button-link'>Sprawdź</a>
-  
 </section>
 
 <style>
@@ -35,7 +41,7 @@ const { heading = 'Aloha!' } = Astro.props as Props;
   }
   .subheader {
     text-transform: uppercase;
-    margin-top: 45px;
+    margin-top: 15px;
     text-align: center;
     padding: 15px 25px;
     font-size: clamp(1.8rem, 2vw, 4rem);
@@ -43,14 +49,22 @@ const { heading = 'Aloha!' } = Astro.props as Props;
     color: var(--base-white);
     font-weight: 500;
   }
+  .text-header {
+    text-align: center;
+    font-family: var(--main-font);
+    font-weight: 500;
+    margin-top: 70px;
+    font-size: 2rem;
+    color: var(--base-white);
+  }
   .text {
     max-width: 400px;
     margin: auto;
     margin-top: 30px;
     font-size: 1rem;
-    color: var(--base-white);
+    color: var(--base-grey);
     letter-spacing: 1px;
-    line-height: 2rem;
+    line-height: 2.3rem;
     padding-inline: 25px;
     text-align: center;
     font-family: var(--second-font);
@@ -79,7 +93,7 @@ const { heading = 'Aloha!' } = Astro.props as Props;
     border-radius: 19px;
     font-family: var(--second-font);
     /* text-transform: uppercase; */
-    transition: .2s all ease-in;
+    transition: 0.2s all ease-in;
   }
   .button-link:hover {
     border: transparent;
