@@ -1,13 +1,9 @@
 ---
-export interface Props {
-  heading?: string;
-}
 
-const { heading = 'Aloha!' } = Astro.props as Props;
 ---
 
 <section class='intro'>
-  <h1 class='header'>{heading}</h1>
+  <h1 class='header'>Aloha!</h1>
   <div class='img-container'>
     <!-- <img class='image' src='./src/images/maciej_1.png' alt='man' /> -->
     <img class='image' src='./src/images/m_m_2_mobile.png' alt='man' />
@@ -15,6 +11,7 @@ const { heading = 'Aloha!' } = Astro.props as Props;
   <h2 class='subheader'>
     <span>Maciej Martowicz</span><span> #</span>CoachSamoZuo
   </h2>
+  <!-- about me section? -->
   <h3 class='text-header'>Co robię na codzień?</h3>
   <p class='text'>
     Zajmuję się projektowaniem <span>strategii MARKETINGOWYCH</span> , <span>

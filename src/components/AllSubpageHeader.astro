@@ -1,0 +1,13 @@
+---
+export interface Props {
+  heading?: string;
+  text?: string;
+}
+
+const { heading = 'Welcome', text = 'Lorem ipsum dos solores Res' } = Astro.props as Props;
+---
+
+<section>
+  <h1>{heading}</h1>
+  <h3>{text}</h3>
+</section>
