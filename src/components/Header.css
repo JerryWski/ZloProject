@@ -1,7 +1,7 @@
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 20px;
   padding: 10px;
 }
@@ -32,6 +32,14 @@
   gap: 60px;
   flex-direction: column;
   z-index: 9;
+}
+.social-wrapper {
+  display: flex;
+  margin-left: auto;
+}
+.fa-solid {
+  margin: 7px;
+  color: var(--base-orange);
 }
 .link, .link-mobile {
   text-decoration: none;
@@ -92,4 +100,16 @@
   width: 30px;
   height: 1px;
   display: block;
+}
+
+@media (max-width: 350px) {
+  .heading {
+    font-size: .9rem;
+  };
+  .subheading {
+    font-size: 0.6rem;
+  }
+  .span_hash {
+
+  }
 }

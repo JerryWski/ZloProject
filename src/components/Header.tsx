@@ -15,26 +15,24 @@ const Header: React.FC = () => {
           </p>
           <p className='subheading'>Make's a difference</p>
         </div>
+        <div className='social-wrapper'>
+        <a href="mailto:kontakt@maciejmartowicz.pl"><i className="fa-solid fa-envelope"></i></a>
+        <a href="tel:+48602649588 "><i className="fa-solid fa-phone"></i></a>
+        </div>
         {/* check if we are on mobile or not */}
         {matches && (
           <div className='nav-links-mobile'>
             <a className='link' href='/about'>
               O mnie
             </a>
+            <a className='link' href='/portoflio'>
+              Portfolio
+            </a>
             <a className='link' href='/blog'>
               Blog
             </a>
-            <a className='link' href='/consulting'>
-              Consulting
-            </a>
-            <a className='link' href='/strategy'>
-              Strategie
-            </a>
-            <a className='link' href='/acacdemy'>
-              Akademia
-            </a>
-            <a className='link' href='/cooperate'>
-              Współpraca
+            <a className='link' href='/contact'>
+              Kontakt
             </a>
           </div>
         )}
@@ -69,14 +67,8 @@ const Header: React.FC = () => {
             initial={{ opacity: 0, x: 45 }}
             className='nav-links'
           >
-            <a className='link-mobile' href='/consulting'>
-              Consulting
-            </a>
-            <a className='link-mobile' href='/strategy'>
-              Strategie
-            </a>
-            <a className='link-mobile' href='/acacdemy'>
-              Akademia
+            <a className='link-mobile' href='/about'>
+              O mnie
             </a>
             <a className='link-mobile' href='/cooperate'>
               Portfolio
@@ -87,7 +79,6 @@ const Header: React.FC = () => {
             <a className='link-mobile' href='/about'>
               Kontakt
             </a>
-            
           </motion.div>
         )}
       </nav>
