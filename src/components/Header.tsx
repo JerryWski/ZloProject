@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { useMediaQuery } from '../utils/useMediaQuery';
 import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const matches = useMediaQuery('(min-width: 768px)');
+
+  // overflow hidden check is toggle is true
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [toggle]);
   return (
     <header>
       <nav className='nav-container'>
@@ -16,8 +26,12 @@ const Header: React.FC = () => {
           <p className='subheading'>Make's a difference</p>
         </div>
         <div className='social-wrapper'>
-        <a href="mailto:kontakt@maciejmartowicz.pl"><i className="fa-solid fa-envelope"></i></a>
-        <a href="tel:+48602649588 "><i className="fa-solid fa-phone"></i></a>
+          <a href='mailto:kontakt@maciejmartowicz.pl'>
+            <i className='fa-solid fa-envelope'></i>
+          </a>
+          <a href='tel:+48602649588 '>
+            <i className='fa-solid fa-phone'></i>
+          </a>
         </div>
         {/* check if we are on mobile or not */}
         {matches && (

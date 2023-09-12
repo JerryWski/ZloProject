@@ -22,8 +22,4 @@
     min-height: 100vh;
   }
   body {
-    /* overflow-y: hidden; */
-  }
-  .sticky {
-    overflow-x: hidden;
   }
