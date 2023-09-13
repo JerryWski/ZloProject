@@ -9,7 +9,7 @@
     <img class='image' src='./src/images/m_m_2_mobile.png' alt='man' />
   </div>
   <h2 class='subheader'>
-    <span>Maciej Martowicz</span><span> #</span>CoachSamoZuo
+    <span class="subheader-span">Maciej Martowicz</span><span> #</span>CoachSamoZuo
   </h2>
   <!-- about me section? -->
   <h3 class='text-header'>Co robię na codzień?</h3>
@@ -29,6 +29,9 @@
 </section>
 
 <style>
+  .intro {
+    padding: 25px;
+  }
   .header {
     margin-top: 80px;
     text-align: center;
@@ -40,30 +43,33 @@
     text-transform: uppercase;
     margin-top: 15px;
     text-align: center;
-    padding: 15px 25px;
+    padding: 15px 0px;
     font-size: clamp(1.8rem, 2vw, 4rem);
-    font-family: var(--main-font);
+    font-family: var(--font_3);
     color: var(--base-white);
-    font-weight: 500;
+    letter-spacing: 1px;
+    font-weight: 900;
+  }
+  .subheader-span {
+    font-weight: 300;
   }
   .text-header {
-    text-align: center;
-    font-family: var(--main-font);
+    text-align: left;
+    font-family: var(--font_3);
     font-weight: 500;
     margin-top: 70px;
     font-size: 2rem;
     color: var(--base-white);
   }
   .text {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: auto;
     margin-top: 30px;
     font-size: 1rem;
     color: var(--base-grey);
     letter-spacing: 1px;
     line-height: 2.3rem;
-    padding-inline: 25px;
-    text-align: center;
+    text-align: left;
     font-family: var(--second-font);
   }
   span {
