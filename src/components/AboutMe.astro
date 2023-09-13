@@ -3,10 +3,29 @@
 ---
 
 <section class='about'>
-  <h3 class='title-small'>O mnie</h3>
-  <h2 class='title-big'>Przeczytaj, to lepiej mnie poznasz</h2>
+  <div>
+    <h3 class='title-small'>O mnie</h3>
+    <h2 class='title-big'>Przeczytaj, to lepiej mnie poznasz</h2>
+  </div>
   <div class='image-wrapper'>
     <img class='image' src='../src/images/about4.png' alt='man' />
+  </div>
+  <div>
+    <p class='quote'>
+      "The way you teach is more important than what you are teaching"
+    </p>
+    <p class='text'>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+      asperiores eum velit repellendus! Pariatur dolorem maiores et dicta ipsa
+      adipisci beatae quibusdam nostrum! Cupiditate obcaecati sed ea architecto
+      sapiente corrupti?
+    </p>
+    <p class='text'>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores
+        asperiores eum velit repellendus! Pariatur dolorem maiores et dicta ipsa
+        adipisci beatae quibusdam nostrum! Cupiditate obcaecati sed ea architecto
+        sapiente corrupti?
+      </p>
   </div>
 </section>
 
@@ -35,5 +54,22 @@
   }
   .image {
     width: 100%;
+  }
+  .quote {
+    margin-top: 20px;
+    font-family: var(--font_3);
+    font-style: italic;
+    font-size: 1.4rem;
+    opacity: .4;
+    text-align: center;
+    color: var(--light-violet);
+  }
+  .text {
+    letter-spacing: 1px;
+    line-height: 2rem;
+    font-family: var(--second-font);
+    margin: 20px 0;
+    font-weight: 500;
+    color: var(--violet);
   }
 </style>
