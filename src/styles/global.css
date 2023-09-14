@@ -26,3 +26,6 @@ html {
   min-height: 100vh;
   scroll-behavior: smooth;
 }
+a {
+  text-decoration: none;
+}

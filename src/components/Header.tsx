@@ -20,10 +20,12 @@ const Header: React.FC = () => {
     <header>
       <nav className='nav-container'>
         <div className='logo-container'>
-          <p className='heading'>
-            <span className='span_hash'>#</span>CoachSamoZuo
-          </p>
-          <p className='subheading'>Make's a difference</p>
+          <a href="/">
+            <p className='heading'>
+              <span className='span_hash'>#</span>CoachSamoZuo
+            </p>
+            <p className='subheading'>Make's a difference</p>
+          </a>
         </div>
         <div className='social-wrapper'>
           <a href='mailto:kontakt@maciejmartowicz.pl'>

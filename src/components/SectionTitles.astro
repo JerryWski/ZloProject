@@ -1,0 +1,33 @@
+---
+export interface Props {
+  titleSmall: string;
+  titleBig: string;
+}
+const {
+  titleSmall = 'O mnie',
+  titleBig = 'Przeczytaj, to lepiej mnie poznasz',
+} = Astro.props as Props;
+---
+
+<div class='titles-container'>
+  <h3 class='title-small'>{titleSmall}</h3>
+  <h2 class='title-big'>{titleBig}</h2>
+</div>
+
+<style>
+  .title-small {
+    margin-top: 60px;
+    color: var(--light-violet);
+    font-weight: 300;
+    font-family: var(--font_3);
+  }
+  .title-big {
+    color: var(--violet);
+    font-family: var(--font_3);
+    font-size: clamp(2.6rem, 3vw, 3rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 20px;
+  }
+</style>
