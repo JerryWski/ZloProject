@@ -1,13 +1,140 @@
 ---
+
 ---
 
-<section class="brands">
-
+<section class='brands-section'>
+  <div class="brands-titles">
+    <h3 class='subheader'>Moje perełki</h3>
+    <h2 class='header'>Marki, które mi zaufały</h2>
+  </div>
+  <div class='brands-container'>
+    <div class='brand-wrapper'>
+      <div class='brand'>
+        <img class='brand-icon' src='/bmw.jpg' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/audi.jpg' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/aviva.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/canal.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/eurotel.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/menrad.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/metlife.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/oriflame.jpg' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/pepsi.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/volswagen.jpg' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/renault.png' alt='bmw-icon' />
+      </div>
+      <div class='brand'>
+        <img class='brand-icon' src='/warta.png' alt='bmw-icon' />
+      </div>
+    </div>
+  </div>
+  <p class="contact-info">Jesteś zainteresowany? Skontaktuj się ze mną!</p>
+  <a href='#contact' class='contact-link'>Kontakt</a>
 </section>
 
 <style>
-    .brands {
-        background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
-        height: 400px;
-    }
+  .brands-section {
+    padding: 25px;
+    background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
+    /* background-color: var(--violet); */
+    /* height: 400px; */
+  }
+  .header {
+    color: var(--base-orange);
+    font-family: var(--font_3);
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: -1.5px;
+    line-height: 46px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: 900;
+    padding-bottom: 20px;
+  }
+  .subheader {
+    margin-top: 60px;
+    color: var(--base-white);
+    font-weight: 300;
+    font-family: var(--font_3);
+  }
+  .brands-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* pointer-events: none; */
+  }
+  .brand-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 60px rgba(0, 0, 0, 0.2);
+  }
+  .brand {
+    position: relative;
+    width: 150px;
+    /* border-radius: 7px; */
+    flex-grow: 1;
+    min-width: 30%;
+    height: 150px;
+    background-color: white;
+  }
+  .brand-icon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    max-width: 50%;
+  }
+  .contact-info {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: var(--base-orange);
+    font-weight: 300;
+    font-size: 1.7rem;
+    line-height: normal;
+    letter-spacing: 1px;
+    font-family: var(--font_3);
+  }
+  .contact-link {
+    width: fit-content;
+    text-decoration: none;
+    align-items: center;
+    margin: 25px 0 25px 0;
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--base-white);
+    padding: 10px 80px;
+    /* border: 1px solid var(--dark-violet); */
+    outline: 1px solid var(--base-white);
+    border-radius: 19px;
+    font-family: var(--second-font);
+    transition: 0.2s all ease-in;
+  }
+  .contact-link {
+    color: var(--base-white);
+    outline: transparent;
+    background-color: var(--base-orange);
+  }
 </style>
