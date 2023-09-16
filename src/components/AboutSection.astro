@@ -1,12 +1,11 @@
 ---
-import SectionTitles from './mini-layouts/SectionTitles.astro';
+import SectionTitles from "../layouts/mini-layouts/SectionTitles.astro";
+
 ---
 
 <section class='about' id='about'>
-  <SectionTitles
-    titleSmall='O mnie'
-    titleBig='Przeczytaj,to lepiej mnie poznasz'
-  />
+  <SectionTitles titleSmall='O mnie'
+  titleBig='Przeczytaj to lepiej mnie poznasz'/>
   <div class='image-wrapper'>
     <img class='image' src='../src/images/about4.png' alt='man' />
   </div>
@@ -49,11 +48,13 @@ import SectionTitles from './mini-layouts/SectionTitles.astro';
   }
   .quote {
     margin-top: 20px;
+    margin-bottom: 40px;
     font-family: var(--font_3);
     font-style: italic;
+    letter-spacing: -1px;
     font-size: 1.4rem;
     opacity: 0.4;
-    text-align: center;
+    /* text-align: center; */
     color: var(--light-violet);
   }
   .text {
@@ -98,7 +99,7 @@ import SectionTitles from './mini-layouts/SectionTitles.astro';
     padding: 19px;
     border-radius: 50%;
     background-color: var(--base-orange);
-    transition: .3s background-color ease;
+    transition: 0.3s background-color ease;
   }
   .fa-brands {
     position: absolute;
@@ -110,6 +111,5 @@ import SectionTitles from './mini-layouts/SectionTitles.astro';
   }
   .social-icon:hover {
     background-color: var(--light-violet);
-
   }
 </style>
