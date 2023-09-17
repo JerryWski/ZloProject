@@ -3,11 +3,37 @@
 ---
 
 <section>
-    <h2>Blog</h2>
+  <h2 class="header">Zajrzyj na mój #Blog</h2>
+  <div class='image-wrapper'>
+    <img class='image' src='./blog1.png' alt='' />
+  </div>
 </section>
 
 <style>
-    h2 {
-        color: white;
-    }
+  section {
+    padding: 25px 25px 0 25px;
+    display: flex;
+    align-items: center;
+    background-color: var(--base-orange);
+  }
+  .header {
+    widows: 50%;
+    font-family: var(--font_3);
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: -1.5px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: 900;
+    /* padding-bottom: 20px; */
+    color: var(--base-white);
+  }
+  .image-wrapper {
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .image {
+    display: flex;
+    width: 100%;
+  }
 </style>
