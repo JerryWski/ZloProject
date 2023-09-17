@@ -3,7 +3,7 @@
 ---
 
 <section>
-  <h2 class="header">Zajrzyj na mój #Blog</h2>
+  <h2 class="header">Zajrzyj na mój <a href="/blog" class="header-link">#Blog</a></h2>
   <div class='image-wrapper'>
     <img class='image' src='./blog1.png' alt='' />
   </div>
@@ -26,6 +26,11 @@
     font-weight: 900;
     /* padding-bottom: 20px; */
     color: var(--base-white);
+  }
+  .header-link {
+    text-decoration: none;
+    color: var(--dark-violet);
+    font-size: 2.4rem;
   }
   .image-wrapper {
     display: flex;

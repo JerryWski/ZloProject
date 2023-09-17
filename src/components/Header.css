@@ -111,3 +111,11 @@
     font-size: 0.6rem;
   }
 }
+@media (max-width: 315px) {
+  .nav-container {
+    justify-content: center;
+  }
+  .hamburger {
+    padding: 0;
+  }
+}
