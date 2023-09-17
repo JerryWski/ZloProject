@@ -4,7 +4,7 @@
 
 <section class='brands-section'>
   <div class="brands-titles">
-    <h3 class='subheader'>Moje perełki</h3>
+    <h3 class='subheader'>Współpraca</h3>
     <h2 class='header'>Marki, które mi zaufały</h2>
   </div>
   <div class='brands-container'>
@@ -53,6 +53,8 @@
 
 <style>
   .brands-section {
+    display: flex;
+    flex-direction: column;
     padding: 25px;
     background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
     /* background-color: var(--violet); */
@@ -121,7 +123,7 @@
     width: fit-content;
     text-decoration: none;
     align-items: center;
-    margin: 25px 0 25px 0;
+    margin: 0px 0 25px 0;
     font-size: 1.1rem;
     text-decoration: none;
     color: var(--base-white);
@@ -129,12 +131,14 @@
     /* border: 1px solid var(--dark-violet); */
     outline: 1px solid var(--base-white);
     border-radius: 19px;
+    margin-bottom: 20px;
     font-family: var(--second-font);
     transition: 0.2s all ease-in;
   }
-  .contact-link {
+  .contact-link:hover {
     color: var(--base-white);
     outline: transparent;
     background-color: var(--base-orange);
+    
   }
 </style>
