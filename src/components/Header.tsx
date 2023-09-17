@@ -27,7 +27,7 @@ const Header: React.FC = () => {
             <p className='subheading'>Make's a difference</p>
           </a>
         </div>
-        <div className='social-wrapper'>
+        <div className='contact-wrapper'>
           <a href='mailto:kontakt@maciejmartowicz.pl'>
             <i className='fa-solid fa-envelope'></i>
           </a>
