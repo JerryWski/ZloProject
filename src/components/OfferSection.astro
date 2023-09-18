@@ -2,16 +2,125 @@
 import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
 ---
 
-<section class='offer' id="offer">
+<section class='offer-section' id='offer'>
   <SectionTitles
     titleSmall='Działalność'
     titleBig='Zobacz w czym mogę Ci pomóc'
   />
+  <div class='offer-container'>
+    <div class='offer'>
+      <a href='/offers'>
+        <div class='image-wrapper'>
+          <img src='/strategy_big.png' alt='work-icon' />
+        </div>
+        <h3>Aloha #Strategie</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          consequuntur quam doloremque
+        </p>
+      </a>
+    </div>
+    <div class='offer'>
+      <a href='/offers'>
+        <div class='image-wrapper'>
+          <img src='/social2_big.png' alt='work-icon' />
+        </div>
+        <h3>Aloha #Academy</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          consequuntur quam doloremque
+        </p>
+      </a>
+    </div>
+    <div class='offer'>
+      <a href='/offers'>
+        <div class='image-wrapper'>
+          <img src='/consulting_big.png' alt='work-icon' />
+        </div>
+        <h3>Aloha #Strategie</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          consequuntur quam doloremque
+        </p>
+      </a>
+    </div>
+  </div>
 </section>
 
 <style>
-  .offer {
+  .offer-section {
     padding: 25px;
     background-color: var(--base-white);
+  }
+  .offer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .offer {
+    width: 100%;
+    padding: 30px;
+    background-color: var(--violet);
+    /* background-color: var(--base-orange); */
+    -webkit-box-shadow: 1px 2px 16px -4px rgba(122, 118, 135, 1);
+    -moz-box-shadow: 1px 2px 16px -4px rgba(122, 118, 135, 1);
+    box-shadow: 1px 2px 16px -4px rgba(122, 118, 135, 1);
+    transition: 0.3s all ease-in;
+  }
+  .offer:hover {
+    border-radius: 7px;
+    background-color: var(--base-white);
+  }
+  .offer:hover p {
+    color: var(--light-violet);
+  }
+.offer:hover .image-wrapper {
+  outline: 1px solid var(--violet);
+}
+  a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .image-wrapper {
+    position: relative;
+    border-radius: 50%;
+    padding: 0px;
+    background-color: var(--base-white);
+    width: 120px;
+    height: 120px;
+    transition: 0.3s all ease-in;
+  }
+  img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    background-color: white;
+    margin: auto;
+    width: 70%;
+  }
+  p {
+    max-width: 330px;
+    color: var(--base-white);
+    font-size: 1rem;
+    font-weight: 300;
+    transition: 0.3s all ease-in;
+  }
+  h3 {
+    line-height: 46px;
+    letter-spacing: -.5px;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    color: var(--base-orange);
+
+  }
+  h3,
+  p {
+    text-align: center;
+    font-family: var(--font_3);
   }
 </style>

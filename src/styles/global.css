@@ -10,7 +10,7 @@
   background-image: linear-gradient(to top, #151220 0%, #2a233e 100%);
   background-repeat: no-repeat;
   /* main colors */
-  --dark-violet: hsl(253, 28%, 10%);
+  --dark-violet: #151221;
   --light-violet: #524577;
   --violet: hsl(256, 28%, 19%);
   --base-orange: #ff7e33;
