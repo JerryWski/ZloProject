@@ -1,20 +1,28 @@
 ---
-import SwiperModule from "./SwiperModule";
+import SwiperModule from './SwiperModule';
 ---
 
-
 <section>
-    <h1>Co o mnie mówią "na mieście"</h1>
-    <SwiperModule client:load/>
+  <h1 class='header'>Co o mnie mówią "na mieście?"</h1>
+  <SwiperModule client:load />
 </section>
 
-
 <style>
-    section {
-        /* height: 300px; */
-        background-color: yellow;
-    }
-    h1 {
-        padding: 25px;
-    }
+  section {
+    height: fit-content;
+    padding: 25px;
+    background-color: var(--base-grey);
+  }
+  .header {
+    color: var(--violet);
+    font-family: var(--font_3);
+    font-size: clamp(2rem, 3vw, 3rem);
+    letter-spacing: -.5px;
+    text-align: center;
+    line-height: 46px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 20px;
+  }
 </style>
