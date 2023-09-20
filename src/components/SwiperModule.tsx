@@ -25,7 +25,7 @@ const SwiperModule = () => {
       <SwiperSlide>
           <div className='swiper-container' key={client.id}>
             <p className='swiper-text'>{client.text}</p>
-            <div className='image-wrapper'>
+            <div className='img-wrapper'>
               <img src={client.image} alt="" />
             </div>
             <h2 className='swiper-header'>{client.header}</h2>
