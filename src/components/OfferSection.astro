@@ -9,41 +9,48 @@ import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
   />
   <div class='offer-container'>
     <div class='offer'>
-      <a href='/offers'>
+      <a class='offer-link' href='/offers'>
         <div class='image-wrapper'>
-          <img src='/strategy_big.png' alt='work-icon' />
+          <img class='offer-img' src='/strategy_big.png' alt='work-icon' />
         </div>
-        <h3>Aloha #Strategie</h3>
-        <p>
+        <h3 class='offer-heading'>Aloha #Strategie</h3>
+        <p class='offer-text'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           consequuntur quam doloremque
         </p>
       </a>
     </div>
     <div class='offer'>
-      <a href='/offers'>
+      <a class='offer-link' href='/offers'>
         <div class='image-wrapper'>
-          <img src='/social2_big.png' alt='work-icon' />
+          <img class='offer-img' src='/social2_big.png' alt='work-icon' />
         </div>
-        <h3>Aloha #Academy</h3>
-        <p>
+        <h3 class='offer-heading'>Aloha #Academy</h3>
+        <p class='offer-text'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           consequuntur quam doloremque
         </p>
       </a>
     </div>
     <div class='offer'>
-      <a href='/offers'>
+      <a class='offer-link' href='/offers'>
         <div class='image-wrapper'>
-          <img src='/consulting_big.png' alt='work-icon' />
+          <img class='offer-img' src='/consulting_big.png' alt='work-icon' />
         </div>
-        <h3>Aloha #Consulting</h3>
-        <p>
+        <h3 class='offer-heading'>Aloha #Consulting</h3>
+        <p class='offer-text'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
           consequuntur quam doloremque
         </p>
       </a>
     </div>
+  </div>
+  <p class='contact-request'>Napisz do mnie lub zadzwoń!</p>
+  <div class='contact-wrapper'>
+    <a class="contact-link" href='tel:+48602649588'> tel: <span>+48 602 649 588</span></a>
+    <a class="contact-link" href='mailto:kontakt@maciejmartowicz.pl'>
+      e-mail: <span>kontakt@maciejmartowicz.pl</span>
+    </a>
   </div>
 </section>
 
@@ -77,10 +84,10 @@ import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
   .offer:hover p {
     color: var(--light-violet);
   }
-.offer:hover .image-wrapper {
-  outline: 1px solid var(--violet);
-}
-  a {
+  .offer:hover .image-wrapper {
+    outline: 1px solid var(--violet);
+  }
+  .offer-link {
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -97,7 +104,7 @@ import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
     height: 120px;
     transition: 0.3s all ease-in;
   }
-  img {
+  .offer-img {
     position: absolute;
     inset: 0;
     display: block;
@@ -105,23 +112,50 @@ import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
     margin: auto;
     width: 70%;
   }
-  p {
+  .offer-text {
     max-width: 330px;
     color: var(--base-white);
     font-size: 1rem;
     font-weight: 300;
     transition: 0.3s all ease-in;
   }
-  h3 {
+  .offer-heading {
     line-height: 46px;
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
     font-size: clamp(1.5rem, 3vw, 3rem);
     color: var(--base-orange);
-
   }
-  h3,
-  p {
+  .offer-heading,
+  .offer-text {
     text-align: center;
+    font-family: var(--font_3);
+  }
+  .contact-wrapper {
+    margin: auto;
+    margin-top: 10px;
+    max-width: fit-content ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .contact-link {
+    color: var(--base-orange);
+    padding: 5px;
+    font-family: var(--font_3);
+    font-size: clamp(.9rem, 3vw, 4rem);
+  }
+  .contact-link span {
+    color: var(--violet);
+  }
+  .contact-request {
+    text-align: center;
+    margin-bottom: 5px;
+    color: var(--base-orange);
+    font-weight: 700;
+    font-size: clamp(1.1rem, 4vw, 4rem);
+    line-height: normal;
+    letter-spacing: 1px;
     font-family: var(--font_3);
   }
 </style>

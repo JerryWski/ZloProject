@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           <a href='mailto:kontakt@maciejmartowicz.pl'>
             <i className='fa-solid fa-envelope'></i>
           </a>
-          <a href='tel:+48602649588 '>
+          <a href='tel:+48602649588'>
             <i className='fa-solid fa-phone'></i>
           </a>
         </div>
