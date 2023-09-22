@@ -5,8 +5,16 @@ import { motion } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
+  const [menuClicked, setMenuClicked] = useState(false);
   const matches = useMediaQuery('(min-width: 768px)');
+
+  const handleMenuClick = () => {
+    if (matches) {
+      return;
+    }
+    setToggle(false);
+    setMenuClicked(true);
+  };
 
   // overflow hidden check is toggle is true
   useEffect(() => {
@@ -47,7 +55,7 @@ const Header: React.FC = () => {
             <a className='link' href='/blog'>
               Blog
             </a>
-            <a className='link' href='/contact'>
+            <a className='link' href='#contact'>
               Kontakt
             </a>
           </div>
@@ -92,7 +100,7 @@ const Header: React.FC = () => {
             <a className='link-mobile' href='/blog'>
               Blog
             </a>
-            <a className='link-mobile' href='/about'>
+            <a className='link-mobile' href='#contact' onClick={handleMenuClick}>
               Kontakt
             </a>
           </motion.div>
