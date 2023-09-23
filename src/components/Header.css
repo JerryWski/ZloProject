@@ -37,6 +37,9 @@
   display: flex;
   margin-left: auto;
 }
+.contact-icon {
+  padding: 2.5px;
+}
 .fa-solid {
   margin: 7px;
   color: var(--base-orange);

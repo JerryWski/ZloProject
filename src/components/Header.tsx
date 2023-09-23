@@ -28,7 +28,7 @@ const Header: React.FC = () => {
     <header>
       <nav className='nav-container'>
         <div className='logo-container'>
-          <a href="/">
+          <a href='/'>
             <p className='heading'>
               <span className='span_hash'>#</span>CoachSamoZuo
             </p>
@@ -36,10 +36,18 @@ const Header: React.FC = () => {
           </a>
         </div>
         <div className='contact-wrapper'>
-          <a href='mailto:kontakt@maciejmartowicz.pl'>
+          <a
+            className='contact-icon'
+            href='mailto:kontakt@maciejmartowicz.pl'
+            aria-label='Link to email'
+          >
             <i className='fa-solid fa-envelope'></i>
           </a>
-          <a href='tel:+48602649588'>
+          <a
+            className='contact-icon'
+            href='tel:+48602649588'
+            aria-label='Link to phone'
+          >
             <i className='fa-solid fa-phone'></i>
           </a>
         </div>
@@ -100,7 +108,11 @@ const Header: React.FC = () => {
             <a className='link-mobile' href='/blog'>
               Blog
             </a>
-            <a className='link-mobile' href='#contact' onClick={handleMenuClick}>
+            <a
+              className='link-mobile'
+              href='#contact'
+              onClick={handleMenuClick}
+            >
               Kontakt
             </a>
           </motion.div>

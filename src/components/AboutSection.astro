@@ -1,11 +1,12 @@
 ---
-import SectionTitles from "../layouts/mini-layouts/SectionTitles.astro";
-
+import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
 ---
 
 <section class='about' id='about'>
-  <SectionTitles titleSmall='O mnie'
-  titleBig='Przeczytaj to lepiej mnie poznasz'/>
+  <SectionTitles
+    titleSmall='O mnie'
+    titleBig='Przeczytaj to lepiej mnie poznasz'
+  />
   <div class='image-wrapper'>
     <img class='image' src='/about4.png' alt='man' />
   </div>
@@ -28,9 +29,19 @@ import SectionTitles from "../layouts/mini-layouts/SectionTitles.astro";
   </div>
   <a href='/about' class='button-link'>Czytaj dalej</a>
   <div class='social-wrapper'>
-    <a href='' class='social-icon'><i class='fa-brands fa-linkedin-in'></i></a>
-    <a href='' class='social-icon'><i class='fa-brands fa-facebook-f'></i></a>
-    <a href='' class='social-icon'><i class='fa-brands fa-tiktok'></i></a>
+    <a
+      href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
+      class='social-icon'
+      aria-label='Link to linkedin'><i class='fa-brands fa-linkedin-in'></i></a
+    >
+    <a
+      href='https://www.facebook.com/doradcaCoachconsultant'
+      class='social-icon'
+      aria-label='Link to Facebook'><i class='fa-brands fa-facebook-f'></i></a
+    >
+    <a href='/' class='social-icon' aria-label='Link to tik-tok'
+      ><i class='fa-brands fa-tiktok'></i></a
+    >
   </div>
 </section>
 
