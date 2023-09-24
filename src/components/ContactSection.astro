@@ -8,40 +8,40 @@
     <p class='contact-text'>Tam mnie znajdziesz!</p>
     <div class='social-icons'>
       <a
-        href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
+        href='https://www.tiktok.com/@maciekmartowicz'
         class='icon-link'
         aria-label='Link to tik-tok'
       >
-        <i class='fa-brands fa-tiktok fa-2x'></i>
+        <i class='fa-brands fa-tiktok'></i>
       </a>
       <a
-        href='mailto:stowidokow.home@gmail.com'
+        href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
         class='icon-link'
         aria-label='Link to linkedin'
       >
-        <i class='fa-brands fa-linkedin-in fa-2x'></i>
+        <i class='fa-brands fa-linkedin-in'></i>
       </a>
       <a
         href='https://www.facebook.com/doradcaCoachconsultant'
         class='icon-link'
         aria-label='Link to Facebook'
       >
-        <i class='fa-brands fa-facebook-f fa-2x'></i>
+        <i class='fa-brands fa-facebook-f'></i>
       </a>
       <a
         href='mailto:kontakt@maciejmartowicz.pl'
         class='icon-link'
         aria-label='Link to email'
       >
-        <i class='fa-solid fa-envelope fa-2x'></i>
+        <i class='fa-solid fa-envelope'></i>
       </a>
       <a href='tel:+48602649588' class='icon-link' aria-label='Link to phone'>
-        <i class='fa-solid fa-phone fa-2x'></i>
+        <i class='fa-solid fa-phone'></i>
       </a>
     </div>
   </div>
   <div class='shortcuts'>
-    <h3>Na skróty:</h3>
+    <h3 class="shortcuts-heading">Na skróty:</h3>
     <a class='shortcuts-links' href='/about'> O mnie</a>
     <a class='shortcuts-links' href='/portfolio'> Portfolio</a>
     <a class='shortcuts-links' href='/blog'> Blog</a>
@@ -71,7 +71,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--base-grey);
+    color: var(--base-white);
   }
   .wrapper {
     display: flex;
@@ -81,8 +81,9 @@
     margin: 0 30px 0 30px;
   }
   .contact-header {
-    font-size: 2.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
+    color: var(--base-white);
     font-family: var(--font_3);
     text-align: center;
     letter-spacing: 5px;
@@ -93,7 +94,7 @@
     font-family: var(--font_3);
     margin-top: 30px;
     font-weight: 900;
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .social-icons {
     margin-top: 30px;
@@ -121,10 +122,15 @@
     align-items: center;
     flex-direction: column;
   }
+  .shortcuts-heading {
+    font-size: 1rem;
+    font-family: var(--font_3);
+  }
   .shortcuts-links {
     text-decoration: none;
     margin: 10px;
     color: var(--base-grey);
+    font-family: var(--second-font);
     transition: 0.3s all ease;
   }
   .shortcuts-links:hover {
@@ -139,14 +145,14 @@
     color: var(--base-white);
     font-family: var(--font_3);
     font-weight: 700;
-    font-size: clamp(1.6rem, 3vw, 2.3rem);
+    font-size: clamp(2rem, 3vw, 2.3rem);
   }
   .logo-subheader {
     color: var(--base-orange);
     font-family: var(--fancy-font);
     font-weight: 300;
     text-align: center;
-    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-size: clamp(1.6rem, 2.5vw, 2rem);
     line-height: 1rem;
     font-style: italic;
     letter-spacing: 3px;
