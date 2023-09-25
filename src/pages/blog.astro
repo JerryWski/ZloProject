@@ -2,16 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 import Card from '../components/Card.astro';
+import { blogData } from '../blogData.js';
 
 const posts = await Astro.glob('../posts/*.md');
+
 ---
 
 <Layout title='#Blog'>
   <AllSubpageHeader heading='#Blog' />
   <section class='blog-section'>
     {
-      posts.map((post) => (
+      posts.map((post, index) => (
         <Card>
+          <div class='image-wrapper'>
+            <img class='image-blog' src={blogData[index].image} alt='' />
+          </div>
           <h2>{post.frontmatter.title}</h2>
           <p>{post.frontmatter.excerpt}</p>
         </Card>
@@ -22,8 +27,18 @@ const posts = await Astro.glob('../posts/*.md');
 
 <style>
   .blog-section {
+    background-color: var(--base-white);
+    padding: 25px;
     display: flex;
     flex-direction: column;
+  }
+  .image-wrapper {
+    width: 90vw;
+  }
+  .image-blog {
+    /* padding: 25px; */
+    border-radius: 7px;
+    width: 100%;
   }
   h2 {
     font-size: 2rem;
