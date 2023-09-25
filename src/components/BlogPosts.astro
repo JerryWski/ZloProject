@@ -1,0 +1,45 @@
+---
+const postsData = [ {
+    image:'Tutaj theme image',
+    title: 'To jest tytuł dla post nr 1',
+    author: 'Maciej Martowicz',
+    date: '25-09-2023r.',
+    dot: '|'
+},
+{
+    image:'Tutaj theme image2',
+    title: 'To jest tytuł dla post nr 2',
+    author: 'Maciej Martowicz',
+    date: '27-09-2023r.',
+    dot: '|'
+}]
+---
+
+
+  <div class="container">
+      {postsData.map(post => (
+      <div class="posts-wrapper">
+          <div class="image-wrapper"><img src='' alt='' />{post.image}</div>
+          <div class="card-wrapper">
+            <h2>{post.title}</h2>
+              <span>{post.author}</span>
+              <span>{post.dot}</span>
+              <span>{post.date}</span>
+              </div>
+      </div>
+          ))}
+  </div>
+
+  <style>
+    .container {
+        background-color: var(--base-white);
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    .posts-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+  </style>
+
