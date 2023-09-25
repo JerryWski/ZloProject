@@ -1,23 +1,63 @@
 ---
 export interface Props {
-    image: string
-    title: string,
-    author: string,
-    dot: string,
-    date: string
+  image: string;
+  title: string;
+  author: string;
+  dot: string;
+  date: string;
+  href: string
 }
-    const { image, title, author, dot, date} = Astro.props as Props;
+const { image, title, author, dot, date, href } = Astro.props as Props;
 ---
 
 <div class='card'>
-    <div class='card-image-wrapper'>
-      <img class='card-image' src='' alt='' />
-      {image}
-    </div>
-    <div class='card-info'>
-      <h2>{title}</h2>
-      <span>{author}</span>
-      <span>{dot}</span>
-      <span>{date}</span>
+  <div class='card-image-wrapper'>
+    <img class='card-image' src={image} alt='' />
+  </div>
+  <div class='card-info'>
+    <h2 class="card-title">{title}</h2>
+    <a class="card-link" href={href}>Czytaj dalej</a>
+    <div class="card-author-wrapper">
+        <span>{author}</span>
+        <span>{dot}</span>
+        <span>{date}</span>
     </div>
   </div>
+</div>
+
+<style>
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px;
+        color: var(--dark-violet);
+        font-family: var(--font_3);
+    }
+    .card-link {
+        padding: 10px 20px 10px 20px;
+        background-color: var(--base-orange);
+        color: var(--base-white);
+        width: fit-content;
+        border-radius: 7px;
+    }
+    .card-info{ 
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card-image-wrapper {
+        width: 90vw;
+        padding-bottom: 20px;
+    }
+    .card-image {
+        width: 100%;
+        border-radius: 7px;
+    }
+    .card-title {
+        line-height: 36px;
+        letter-spacing: -.5px;
+        padding-bottom: 10px;
+    }
+</style>
