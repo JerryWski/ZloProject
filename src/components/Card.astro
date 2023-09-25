@@ -1,0 +1,23 @@
+---
+export interface Props {
+    image: string
+    title: string,
+    author: string,
+    dot: string,
+    date: string
+}
+    const { image, title, author, dot, date} = Astro.props as Props;
+---
+
+<div class='card'>
+    <div class='card-image-wrapper'>
+      <img class='card-image' src='' alt='' />
+      {image}
+    </div>
+    <div class='card-info'>
+      <h2>{title}</h2>
+      <span>{author}</span>
+      <span>{dot}</span>
+      <span>{date}</span>
+    </div>
+  </div>
