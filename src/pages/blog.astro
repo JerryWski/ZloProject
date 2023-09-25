@@ -1,16 +1,31 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
-import BlogPosts from '../components/BlogPosts.astro';
+import Card from '../components/Card.astro';
+
+const posts = await Astro.glob('../posts/*.md');
 ---
 
 <Layout title='#Blog'>
-    <AllSubpageHeader heading='#Blog'/>
-    <section>
-        <BlogPosts />
-    </section>
+  <AllSubpageHeader heading='#Blog' />
+  <section class='blog-section'>
+    {
+      posts.map((post) => (
+        <Card>
+          <h2>{post.frontmatter.title}</h2>
+          <p>{post.frontmatter.excerpt}</p>
+        </Card>
+      ))
+    }
+  </section>
 </Layout>
 
 <style>
-    
+  .blog-section {
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 2rem;
+  }
 </style>

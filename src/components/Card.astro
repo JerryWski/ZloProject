@@ -1,63 +1,44 @@
 ---
-export interface Props {
-  image: string;
-  title: string;
-  author: string;
-  dot: string;
-  date: string;
-  href: string
-}
-const { image, title, author, dot, date, href } = Astro.props as Props;
+const postsData = [
+  {
+    image: '/blog-image1.webp',
+    title: 'To jest tytuł do wstępu do mojego pierwszego bloga - zapraszam',
+    author: 'Maciej Martowicz',
+    date: '25-09-2023r.',
+    href: '/',
+  },
+  {
+    image: '/about4.png',
+    title: 'To jest tytuł do wstępu do mojego druiego bloga - zapraszam',
+    author: 'Maciej Martowicz',
+    date: '27-09-2023r.',
+    href: '/',
+  },
+];
 ---
 
-<div class='card'>
-  <div class='card-image-wrapper'>
-    <img class='card-image' src={image} alt='' />
-  </div>
-  <div class='card-info'>
-    <h2 class="card-title">{title}</h2>
-    <a class="card-link" href={href}>Czytaj dalej</a>
-    <div class="card-author-wrapper">
-        <span>{author}</span>
-        <span>{dot}</span>
-        <span>{date}</span>
+{
+  (
+    <div class='card'>
+      <slot />
     </div>
-  </div>
-</div>
+  )
+}
 
 <style>
-    .card {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 25px;
-        color: var(--dark-violet);
-        font-family: var(--font_3);
-    }
-    .card-link {
-        padding: 10px 20px 10px 20px;
-        background-color: var(--base-orange);
-        color: var(--base-white);
-        width: fit-content;
-        border-radius: 7px;
-    }
-    .card-info{ 
-        display: flex;
-        flex-direction: column;
-        
-    }
-    .card-image-wrapper {
-        width: 90vw;
-        padding-bottom: 20px;
-    }
-    .card-image {
-        width: 100%;
-        border-radius: 7px;
-    }
-    .card-title {
-        line-height: 36px;
-        letter-spacing: -.5px;
-        padding-bottom: 10px;
-    }
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    color: var(--dark-violet);
+    font-family: var(--font_3);
+  }
+  .image-wrapper {
+    width: 100vw;
+  }
+  .image-blog {
+    width: 100%;
+  }
 </style>

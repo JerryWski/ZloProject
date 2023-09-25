@@ -6,45 +6,63 @@ const postsData = [
     title: 'To jest tytuł do wstępu do mojego pierwszego bloga - zapraszam',
     author: 'Maciej Martowicz',
     date: '25-09-2023r.',
-    dot: '|',
-    href: '/'
-
+    href: '/',
   },
   {
     image: '/about4.png',
     title: 'To jest tytuł do wstępu do mojego druiego bloga - zapraszam',
     author: 'Maciej Martowicz',
     date: '27-09-2023r.',
-    dot: '|',
-    href: '/'
+    href: '/',
   },
 ];
+
 ---
 
 <div class='container'>
   {
     postsData.map((post) => (
-      <Card
-        image={post.image}
-        title={post.title}
-        href={post.href}
-        author={post.author}
-        date={post.date}
-        dot={post.dot}
-      />
+      <Card>
+        <div class='image-wrapper'>
+          <img class='image-blog' src={post.image} alt='blog-theme' />
+        </div>
+        <div class='author-wrapper'>
+          <span class='span-info'>{post.author}</span>
+          <span>|</span>
+          <span>data</span>
+        </div>
+      </Card>
     ))
   }
 </div>
 
 <style>
   .container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--base-white);
     gap: 3rem;
     display: flex;
     flex-direction: column;
   }
-  .card {
+  .image-wrapper {
+    width: 100vw;
+    padding: 20px;
+  }
+  .image-blog {
+    display: block;
+    width: 100%;
+  }
+  .author-wrapper {
     display: flex;
-    flex-direction: column;
+    padding: 0 20px 0;
+    font-size: 1rem;
+    align-self: flex-start;
+  }
+  span {
+    font-size: clamp(0.2rem, 3vw, 3rem);
+    margin: 5px;
   }
 </style>
