@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+
+export async function getStaticPaths() {
+  const posts = await Astro.glob('../content/*.md');
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
+    },
+    props: {
+      post,
+    },
+  }));
+}
+const { Content, frontmatter } = Astro.props.post;
+---
+
+<Layout title={frontmatter.title} >
+  <section>
+    <div>
+      <Card>
+        <h2>{frontmatter.title}</h2>
+        <div class="author-info">
+            Napisał {frontmatter.author} | {new Date(frontmatter.date).toLocaleDateString()}
+        </div>
+        <Content />
+        <a class='blog-link' href='/blog'>Powrót</a>
+      </Card>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  section {
+    background-color: var(--base-white);
+    padding: 25px;
+  }
+  h2 {
+    font-size: clamp(2rem, 3vw, 4rem);
+    
+  }
+  .blog-link {
+    width: fit-content;
+    margin-top: 20px;
+    padding: 15px 45px;
+    color: var(--base-white);
+    border-radius: 7px;
+    background-color: var(--base-orange);
+    transition: 0.3s all ease;
+  }
+  .author-info {
+    margin: 10px 0;
+  }
+</style>
