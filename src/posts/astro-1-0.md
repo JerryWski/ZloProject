@@ -1,9 +1,8 @@
 ---
-title: Astro 1.0
+title: Od Zera do Bohaterki Biznesu
 slug: astro-1-0
-excerpt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsam eius
-      similique iusto, omnis libero?
-date: 2023-09-25
+excerpt: Historia przemiany Joasi, która pełna nadziei i determinacji, zdecydowała się opuścić etat i założyć własną firmę - brzmi znajomo?
+date: 26-09-2023
 author: Maciej Martowicz
 ---
 

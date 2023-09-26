@@ -17,8 +17,16 @@ const posts = await Astro.glob('../posts/*.md');
           <div class='image-wrapper'>
             <img class='image-blog' src={blogData[index].image} alt='' />
           </div>
-          <h2>{post.frontmatter.title}</h2>
-          <p>{post.frontmatter.excerpt}</p>
+          <div class="blog-frontmatter-wrapper">
+            <h2>{post.frontmatter.title}</h2>
+            <p>{post.frontmatter.excerpt}</p>
+            <div class="blog-author-wrapper">
+              <span>{post.frontmatter.author}</span>
+              <span> | </span>
+              <span>{post.frontmatter.date}</span>
+              </div>
+            <a class="blog-link" href="">Czytaj dalej</a>
+          </div>
         </Card>
       ))
     }
@@ -32,15 +40,35 @@ const posts = await Astro.glob('../posts/*.md');
     display: flex;
     flex-direction: column;
   }
-  .image-wrapper {
-    width: 90vw;
-  }
   .image-blog {
-    /* padding: 25px; */
     border-radius: 7px;
     width: 100%;
   }
+  .blog-frontmatter-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+  .blog-author-wrapper {
+    opacity: .7;
+    font-size: .9rem;
+  }
+  .blog-link {
+    width: fit-content;
+    padding: 15px 25px;
+    color: var(--base-white);
+    border-radius: 7px;
+    background-color: var(--base-orange);
+    transition: .3s all ease;
+  }
+  .blog-link:hover {
+    color: var(--base-white);
+    outline: 1px solid var(--violet);
+    background-color: var(--violet);
   }
 </style>
