@@ -1,5 +1,6 @@
 ---
 import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
+import OfferCard from './OfferCard';
 ---
 
 <section class='offer-section' id='offer'>
@@ -7,7 +8,8 @@ import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
     titleSmall='Działalność'
     titleBig='Zobacz w czym mogę Ci pomóc'
   />
-  <div class='offer-container'>
+  <OfferCard client:load/>
+  <!-- <div class='offer-container'>
     <div class='offer'>
       <a class='offer-link' href='/offers'>
         <div class='image-wrapper'>
@@ -44,7 +46,7 @@ import SectionTitles from '../layouts/mini-layouts/SectionTitles.astro';
         </p>
       </a>
     </div>
-  </div>
+  </div> -->
   <p class='contact-request'>Napisz do mnie lub zadzwoń!</p>
   <div class='contact-wrapper'>
     <a class="contact-link" href='tel:+48602649588'> tel: <span>+48 602 649 588</span></a>
