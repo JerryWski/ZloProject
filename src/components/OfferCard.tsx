@@ -9,11 +9,12 @@ const OfferCard: React.FC = () => {
     offset: ['0 1', '.53 1'],
   });
   const scaleProgress = useTransform(scrollYProgress, [0,1], [.7, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0,1], [.6, 1]);
   return (
     <motion.div
       style={{
         scale: scaleProgress,
-        opacity: scrollYProgress,
+        opacity: opacityProgress,
       }}
       ref={ref}
       className='offer-container'
