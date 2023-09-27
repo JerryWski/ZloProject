@@ -2,20 +2,61 @@
 export interface Props {
   heading?: string;
   text?: string;
+  image?: string
 }
 
-const { heading = 'Welcome', text = 'Lorem ipsum dos solores Res' } = Astro.props as Props;
+const { heading = 'Welcome', text = 'Lorem ipsum dos solores Res', image='' } = Astro.props as Props;
 ---
 
 <section>
-  <h1>{heading}</h1>
-  <h3>{text}</h3>
+  <div class="header-wrapper">
+    <h1><span>Aloha </span>{heading}</h1>
+    <h3>{text}</h3>
+  </div>
+  <div class="image-wrapper"><img src={image} alt=""></div>
 </section>
 
 
 <style>
   section {
-    padding: 25px;
+    gap: 20px;
+    padding: 85px 25px;
+    display: flex;
     background-color: var(--base-orange);
+    font-family: var(--font_3);
+    color: var(--violet);
+  }
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .image-wrapper {
+    /* opacity: .2; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+  }
+  div img {
+    width: 100%;
+  }
+  h1 {
+    width: fit-content;
+    font-size: clamp(2.7rem, 10vw, 5.5rem);
+    line-height: 46px;
+    letter-spacing: -1.5px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    color: var(--light-violet);
+    font-style: italic;
+  }
+  span {
+    color: var(--base-white);
+    font-family: var(--fancy-font);
+    font-size: clamp(3rem, 10vw, 5.5rem);
   }
 </style>

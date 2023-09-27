@@ -8,7 +8,8 @@ const posts = await Astro.glob('../content/*.md');
 ---
 
 <Layout title='#Blog'>
-  <AllSubpageHeader heading='#Blog' />
+  <AllSubpageHeader heading='#Blog' text='CoachSameZuo i jego złote myśli' image='./blog3-icon.svg'/>
+
   <section class='blog-section'>
     {
       posts.map((post, index) => (
