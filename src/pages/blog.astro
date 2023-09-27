@@ -21,7 +21,7 @@ const posts = await Astro.glob('../content/*.md');
             <h2>{post.frontmatter.title}</h2>
             <p>{post.frontmatter.excerpt}</p>
             <div class='blog-author-wrapper'>
-              <span>{post.frontmatter.author}</span>
+              <span class="blog-author">{post.frontmatter.author}</span>
               <span> | </span>
               <span>{new Date(post.frontmatter.date).toLocaleDateString()}</span>
             </div>
@@ -50,6 +50,9 @@ const posts = await Astro.glob('../content/*.md');
     display: flex;
     flex-direction: column;
     gap: 15px;
+  }
+  .blog-author {
+    font-weight: bold;
   }
   h2 {
     font-size: clamp(1.6rem, 3vw, 3rem);
