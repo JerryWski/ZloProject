@@ -23,7 +23,7 @@ const posts = await Astro.glob('../content/*.md');
             <div class='blog-author-wrapper'>
               <span>{post.frontmatter.author}</span>
               <span> | </span>
-              <span>{post.frontmatter.date}</span>
+              <span>{new Date(post.frontmatter.date).toLocaleDateString()}</span>
             </div>
             <a class='blog-link' href={`/${post.frontmatter.slug}`}>
               Czytaj dalej

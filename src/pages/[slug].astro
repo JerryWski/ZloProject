@@ -23,7 +23,7 @@ const { Content, frontmatter } = Astro.props.post;
       <Card>
         <h2>{frontmatter.title}</h2>
         <div class="author-info">
-            Napisał {frontmatter.author} | {new Date(frontmatter.date).toLocaleDateString()}
+            Autor: <strong>{frontmatter.author} </strong> | {new Date(frontmatter.date).toLocaleDateString()}
         </div>
         <Content />
         <a class='blog-link' href='/blog'>Powrót</a>
