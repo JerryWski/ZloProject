@@ -22,8 +22,8 @@ const SwiperModule = () => {
       className='mySwiper'
     >
       {clients.map((client) => (
-        <SwiperSlide>
-          <div className='swiper-container' key={client.id}>
+        <SwiperSlide key={client.id}>
+          <div className='swiper-container'>
             <p className='swiper-text'>{client.text}</p>
             <div className='img-wrapper'>
               <img src={client.image} alt='man' />

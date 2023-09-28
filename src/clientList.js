@@ -3,7 +3,7 @@ export const clients = [
     id: 1,
     image: './makarenko.png',
     header: 'Andrzej Makarenko',
-    subheader: 'CEO & Founder Szkoła Językowa Speech Language Studio',
+    subheader: 'CEO & Founder Speech Language Studio',
     text: '"Pełny profesjonalizm, duże zaangażowanie, znajomość marketingu i ogromne doświadczenie - to tylko niektóre cechy, które posiada Maciej Martowicz. Z całego serca polecam współpracę z tym człowiekiem"',
   },
   {
