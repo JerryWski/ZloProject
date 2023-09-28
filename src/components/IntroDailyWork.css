@@ -1,0 +1,21 @@
+.text-header {
+    text-align: left;
+    font-family: var(--font_3);
+    font-weight: 500;
+    margin-top: 70px;
+    font-size: 1.8rem;
+    line-height: 46px;
+    letter-spacing: -1px;
+    color: var(--base-white);
+  }
+  .text {
+    /* max-width: 400px; */
+    margin: auto;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: var(--base-grey);
+    letter-spacing: 1px;
+    line-height: 2rem;
+    text-align: left;
+    font-family: var(--second-font);
+  }
