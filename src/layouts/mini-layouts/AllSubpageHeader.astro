@@ -10,7 +10,9 @@ const { heading = 'Welcome', text = 'Lorem ipsum dos solores Res', image='' } = 
 
 <section>
   <div class="header-wrapper">
-    <h1><span>Aloha </span>{heading}</h1>
+    <span>Aloha </span>
+    <h1>
+      {heading}</h1>
     <h3>{text}</h3>
   </div>
   <div class="image-wrapper"><img src={image} alt=""></div>
@@ -28,6 +30,7 @@ const { heading = 'Welcome', text = 'Lorem ipsum dos solores Res', image='' } = 
   }
   .header-wrapper {
     display: flex;
+    flex-basis: 1;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -51,7 +54,7 @@ const { heading = 'Welcome', text = 'Lorem ipsum dos solores Res', image='' } = 
   }
 
   h3 {
-    margin-top: 10px;
+    margin-top: 15px;
     color: var(--light-violet);
     font-style: italic;
   }

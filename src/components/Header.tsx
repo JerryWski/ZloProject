@@ -57,8 +57,8 @@ const Header: React.FC = () => {
             <a className='link' href='/about'>
               O mnie
             </a>
-            <a className='link' href='/portoflio'>
-              Portfolio
+            <a className='link' href='/activities'>
+              Działalność
             </a>
             <a className='link' href='/blog'>
               Blog
@@ -102,8 +102,8 @@ const Header: React.FC = () => {
             <a className='link-mobile' href='/about'>
               O mnie
             </a>
-            <a className='link-mobile' href='/cooperate'>
-              Portfolio
+            <a className='link-mobile' href='/activities'>
+              Działalność
             </a>
             <a className='link-mobile' href='/blog'>
               Blog
