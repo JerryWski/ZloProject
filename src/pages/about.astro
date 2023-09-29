@@ -4,8 +4,63 @@ import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 ---
 
 <Layout title='#About'>
-    <AllSubpageHeader heading='#O mnie'/>
+  <AllSubpageHeader heading='#O mnie' image='./maciej_paint_wh.png' />
+  <section>
+    <h2><span>#</span>CoachSameZuo - <span>Maciej Martowicz</span></h2>
+    <h3>"Jestem unikalny, bo dostarczam unikalnych doświadczeń"</h3>
+    <div class='video-container'>
+      <video class='about-video' src='./m-about.mp4' controls></video>
+    </div>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit ipsum
+      nobis excepturi itaque eius quibusdam pariatur perspiciatis omnis illum,
+      harum blanditiis ab minima ad, non ut cumque sapiente nam ratione.
+    </p>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit ipsum
+        nobis excepturi itaque eius quibusdam pariatur perspiciatis omnis illum,
+        harum blanditiis ab minima ad, non ut cumque sapiente nam ratione.
+      </p>
+  </section>
 </Layout>
 
 <style>
+  section {
+    background-color: var(--base-white);
+    padding: 45px 25px;
+  }
+  .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+  }
+  .about-video {
+    width: 100%;
+  }
+  h2 {
+    color: var(--violet);
+  font-family: var(--font_3);
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: clamp(1.7rem,3vw,2.3rem);
+  }
+  h3 {
+    color: var(--light-violet);
+    font-weight: 300;
+    font-style: italic;
+  }
+  span {
+    color: var(--base-orange);
+  }
+  p {
+    letter-spacing: 1px;
+  line-height: 2rem;
+  font-family: var(--second-font);
+  margin: 20px 0;
+  font-weight: 500;
+  color: var(--violet);
+
+  }
 </style>
