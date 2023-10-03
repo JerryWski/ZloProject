@@ -2,23 +2,27 @@
 export interface Props {
   heading?: string;
   text?: string;
+  subtext?: string;
   image?: string;
 }
 
 const {
   heading = 'Welcome',
   text = 'Lorem ipsum dos solores Res',
+  subtext = 'Lorem',
   image = '',
 } = Astro.props as Props;
 ---
 
 <section>
   <div class='header-wrapper'>
-    <span>Aloha</span>
     <h1>
       {heading}
     </h1>
-    <h3>{text}</h3>
+    <p>{text}</p>
+    <span>
+      {subtext}
+    </span>
   </div>
   <div class='image-wrapper'><img src={image} alt='' /></div>
 </section>
@@ -30,13 +34,6 @@ const {
     display: flex;
     background-color: var(--base-orange);
 
-    /* background-image: linear-gradient(180deg, #ff5858 0%, #f09819 100%); */
-    /* background: linear-gradient(
-      180deg,
-      rgb(250, 166, 70) 0%,
-      rgb(241, 125, 58) 49%,
-      rgb(221, 98, 27) 94%
-    ); */
     font-family: var(--font_3);
     color: var(--violet);
   }
@@ -62,18 +59,20 @@ const {
     width: fit-content;
     font-size: clamp(2.5rem, 8vw, 5.5rem);
     line-height: 46px;
+    color: var(--base-white);
     letter-spacing: -1.5px;
   }
-
-  h3 {
-    margin-top: 15px;
+  p {
+    margin-top: 5px;
+    line-height: 23px;
     font-weight: 400;
     color: var(--violet);
     font-style: italic;
   }
   span {
-    color: var(--base-white);
-    font-family: var(--fancy-font);
-    font-size: clamp(2.7rem, 10vw, 5.5rem);
+    margin-top: 3px;
+    opacity: .8;
+    font-family: var(--font_3);
+    font-size: .7rem;
   }
 </style>
