@@ -1,6 +1,5 @@
 ---
-import IntroDailyWork from "../Intro/IntroDailyWork";
-
+import IntroDailyWork from '../Intro/IntroDailyWork';
 ---
 
 <section class='intro-section'>
@@ -9,7 +8,8 @@ import IntroDailyWork from "../Intro/IntroDailyWork";
     <img class='image' src='/m_m_2_mobile.png' alt='man' />
   </div>
   <h2 class='subheader'>
-    <span class="subheader-span">Maciej Martowicz</span><span> #</span>CoachSamoZuo
+    <span class='subheader-span-name'>Maciej Martowicz</span>
+    <span> #CoachSamoZuo</span>
   </h2>
   <!-- about me section? -->
   <IntroDailyWork client:load />
@@ -29,23 +29,22 @@ import IntroDailyWork from "../Intro/IntroDailyWork";
     font-family: var(--fancy-font);
   }
   .subheader {
-    text-transform: uppercase;
     margin-top: 15px;
     text-align: center;
     padding: 15px 0px;
-    font-size: clamp(1.5rem, 2vw, 4rem);
+    font-size: 1.6rem;
     font-family: var(--font_3);
     color: var(--base-white);
     letter-spacing: 1px;
     font-weight: 900;
   }
-  .subheader-span {
+  .subheader-span-name {
+    text-transform: uppercase;
     font-weight: 300;
-  }
-  
-  span {
     color: var(--base-orange);
+    font-size: clamp(1rem, 2vw, 2.5rem);
   }
+
   .img-container {
     margin: 0px auto 0 auto;
     width: 220px;
@@ -73,4 +72,9 @@ import IntroDailyWork from "../Intro/IntroDailyWork";
     background-color: var(--base-orange);
   }
 
+  @media (min-width: 340px) {
+    .subheader {
+      font-size: clamp(2rem, 3vw, 4rem);
+    }
+  }
 </style>

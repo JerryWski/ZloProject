@@ -64,10 +64,11 @@
   font-size: clamp(1.3rem, 3vw, 2.3rem);
 }
 .subheading {
+  text-align: center;
   color: var(--base-orange);
   font-family: var(--fancy-font);
   font-weight: 300;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
   line-height: 1rem;
   font-style: italic;
   letter-spacing: 3px;

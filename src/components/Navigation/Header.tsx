@@ -32,7 +32,7 @@ const Header: React.FC = () => {
             <p className='heading'>
               <span className='span_hash'>#</span>CoachSamoZuo
             </p>
-            <p className='subheading'>Make's a difference</p>
+            <p className='subheading'>make's a difference</p>
           </a>
         </div>
         <div className='contact-wrapper'>
