@@ -16,16 +16,18 @@ const IntroDailyWork = () => {
     >
       <h3 className='text-header'>Co robię na codzień?</h3>
       <p className='text'>
-        Zajmuję się projektowaniem <span>strategii MARKETINGOWYCH</span> ,{' '}
-        <span>strategii BRANDINGOWYCH</span> ( strategii marki ) oraz{' '}
-        <span>strategii SPRZEDAŻOWYCH</span> dla firm i biznesu B2B, B2B2C i
-        B2C.
+        Wyciągam z czarnej dupy firmy małe, bardzo duże, średnie i – ale to
+        wtedy kiedy tam się znalazły .Innym pomagam złapać najlepszą falę kiedy
+        już surfują ale …nie wiedzą co trzeba zrobić dalej żeby złapać tą
+        Najlepszą Falę i wyprzedzić pozostałych o kilka długości deski.
       </p>
+      <h3 className='text-header'>Na czym się ZUOwybitnie znam :</h3>
       <p className='text'>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis ipsum
-        nisi soluta nostrum accusamus labore nam temporibus! Cupiditate
-        laboriosam veniam quo unde inventore tenetur vel asperiores amet
-        officia. Necessitatibus, cumque.
+        Moje umiejętności obejmują opracowywanie strategii marketingu, brandingu
+        i komunikacji B2B, które pomagają firmom budować silne i rozpoznawalne
+        marki. Dodatkowo, specjalizuję się w strategiach sprzedaży, w tym social
+        selling, który jest niezwykle skutecznym narzędziem w dzisiejszym
+        świecie biznesu.
       </p>
     </div>
   );

@@ -3,7 +3,11 @@ import SwiperModule from './SwiperModule';
 ---
 
 <section>
-  <h1 class='header'>Co o mnie mówią zuoKlienci</h1>
+  <h1 class='header'>zuoKlienci</h1>
+  <p class='subheader'>
+    "Oni nie są gapy - potrafią liczyć hajs i wiedzą gdzie i z kim robić
+    consultingi - gdzie jak włożą tam wyjmą z nawiązką :"
+  </p>
   <SwiperModule client:load />
   <div class='contact-wrapper'>
     <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
@@ -32,13 +36,22 @@ import SwiperModule from './SwiperModule';
     color: var(--violet);
     font-family: var(--font_3);
     font-size: clamp(2rem, 3vw, 3rem);
-    letter-spacing: -.5px;
+    letter-spacing: -0.5px;
     text-align: center;
     line-height: 46px;
-    margin-top: 60px;
+    margin-top: 50px;
     /* text-transform: uppercase; */
     font-weight: 900;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  .subheader {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    line-height: 23px;
+    text-align: center;
+    font-weight: 400;
+    color: var(violet);
+    font-style: italic;
   }
   .contact-wrapper {
     margin-top: 25px;
@@ -50,12 +63,12 @@ import SwiperModule from './SwiperModule';
   }
   .contact-wrapper :is(span) {
     color: var(--base-orange);
-    font-size: clamp(.9rem, 3vw, 4rem);
+    font-size: clamp(0.9rem, 3vw, 4rem);
   }
   .contact-link {
     color: var(--violet);
     font-family: var(--font_3);
-    font-size: clamp(.9rem, 3vw, 4rem);
+    font-size: clamp(0.9rem, 3vw, 4rem);
   }
   .contact-wrapper a:first-child span {
     text-decoration: underline;
@@ -84,4 +97,5 @@ import SwiperModule from './SwiperModule';
     transform: translate(-50%, -50%);
     color: var(--base-white);
   }
+ 
 </style>

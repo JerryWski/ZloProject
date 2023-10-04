@@ -8,7 +8,7 @@ const posts = await Astro.glob('../content/*.md');
 ---
 
 <Layout title='#Blog'>
-  <AllSubpageHeader heading='#Blog' text='CoachSameZuo i jego złote myśli' image='/blog3-icon.svg'/>
+  <AllSubpageHeader heading='#Blog' subtext='' text='CoachSameZuo i jego złote myśli' image='/blog3-icon.svg'/>
 
   <section class='blog-section'>
     {
@@ -30,6 +30,23 @@ const posts = await Astro.glob('../content/*.md');
             </a>
           </div>
         </Card>
+        <span class="span-line"></span>
+        <div class='contact-wrapper'>
+    <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
+      <span>zuokontakt@coachsamozuo.com</span>
+    </a>
+    <div class='contact-links'>
+      <a class='contact-link' href='tel:+48602649588'>
+        tel. <span>602-649-588</span> oraz na
+      </a>
+      <a
+        class='contact-social-icon'
+        href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
+      >
+        <i class='fa-brands fa-linkedin-in'></i>
+      </a>
+    </div>
+  </div>
       ))
     }
   </section>
@@ -79,5 +96,54 @@ const posts = await Astro.glob('../content/*.md');
     color: var(--base-white);
     outline: 1px solid var(--violet);
     background-color: var(--violet);
+  }
+  .span-line {
+    width: 85%;
+    border-top: 1px solid var(--violet);
+  }
+  .contact-wrapper {
+    margin-top: 25px;
+    margin-left: 0;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .contact-wrapper :is(span) {
+    color: var(--base-orange);
+    font-size: clamp(0.9rem, 3vw, 4rem);
+  }
+  .contact-link {
+    color: var(--violet);
+    font-family: var(--font_3);
+    font-size: clamp(0.9rem, 3vw, 4rem);
+  }
+  .contact-wrapper a:first-child span {
+    text-decoration: underline;
+  }
+  .contact-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contact-social-icon {
+    position: relative;
+    font-size: 1rem;
+    padding: 19px;
+    border-radius: 7px;
+    background-color: var(--base-orange);
+    transition: 0.3s background-color ease;
+  }
+  .contact-social-icon:hover {
+    background-color: var(--violet);
+  }
+  .fa-brands {
+    position: absolute;
+    padding: 19px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--base-white);
   }
 </style>
