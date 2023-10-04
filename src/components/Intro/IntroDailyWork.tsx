@@ -25,9 +25,8 @@ const IntroDailyWork = () => {
       <p className='text'>
         Moje umiejętności obejmują opracowywanie strategii marketingu, brandingu
         i komunikacji B2B, które pomagają firmom budować silne i rozpoznawalne
-        marki. Dodatkowo, specjalizuję się w strategiach sprzedaży, w tym social
-        selling, który jest niezwykle skutecznym narzędziem w dzisiejszym
-        świecie biznesu.
+        marki. Dodatkowo, specjalizuję się w Social media marketing, w tym social
+        selling, Emplyer Branding i nie tylko!
       </p>
     </div>
   );
