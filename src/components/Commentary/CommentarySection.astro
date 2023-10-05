@@ -4,7 +4,7 @@ import SwiperModule from './SwiperModule';
 
 <section>
   <div class="img-wrapper">
-    <img src="/speaker.png" alt="">
+    <img src="/speaker.png" alt="speaker-icon">
   </div>
   <h1 class='header'>To moi zuoKlienci...</h1>
   <p class='subheader'>
@@ -14,7 +14,7 @@ import SwiperModule from './SwiperModule';
   <SwiperModule client:load />
   <div class='contact-wrapper'>
     <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
-      <span>zuokontakt@coachsamozuo.com</span>
+      <span class="email-span">zuokontakt@coachsamozuo.com</span>
     </a>
     <div class='contact-links'>
       <a class='contact-link' href='tel:+48602649588'>
@@ -36,7 +36,7 @@ import SwiperModule from './SwiperModule';
     background-color: rgb(229, 227, 233);
   }
   .img-wrapper {
-    width: 100px;
+    width: 70px;
     margin: 0 auto;
   }
   .img-wrapper img {
@@ -49,7 +49,7 @@ import SwiperModule from './SwiperModule';
     letter-spacing: -0.5px;
     text-align: center;
     line-height: 46px;
-    margin-top: 20px;
+    margin-top: 10px;
     /* text-transform: uppercase; */
     font-weight: 900;
     padding-bottom: 10px;
@@ -80,7 +80,7 @@ import SwiperModule from './SwiperModule';
     font-family: var(--font_3);
     font-size: clamp(0.9rem, 3vw, 4rem);
   }
-  .contact-wrapper a:first-child span {
+  .email-span {
     text-decoration: underline;
   }
   .contact-links {

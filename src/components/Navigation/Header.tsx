@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             <a className='link' href='/about'>
               O SamoZuo
             </a>
-            <a className='link' href='/activities'>
+            <a className='link' href='/offers'>
               zuoDziałalność
             </a>
             <a className='link' href='/blog'>
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
             <a className='link-mobile' href='/about'>
               O SamoZuo
             </a>
-            <a className='link-mobile' href='/activities'>
+            <a className='link-mobile' href='/offers'>
               zuoDziałalność
             </a>
             <a className='link-mobile' href='/blog'>

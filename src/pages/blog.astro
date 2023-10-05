@@ -33,7 +33,7 @@ const posts = await Astro.glob('../content/*.md');
         <span class="span-line"></span>
         <div class='contact-wrapper'>
     <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
-      <span>zuokontakt@coachsamozuo.com</span>
+      <span class="email-span">zuokontakt@coachsamozuo.com</span>
     </a>
     <div class='contact-links'>
       <a class='contact-link' href='tel:+48602649588'>
@@ -64,6 +64,7 @@ const posts = await Astro.glob('../content/*.md');
     width: 100%;
   }
   .blog-frontmatter-wrapper {
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -119,7 +120,7 @@ const posts = await Astro.glob('../content/*.md');
     font-family: var(--font_3);
     font-size: clamp(0.9rem, 3vw, 4rem);
   }
-  .contact-wrapper a:first-child span {
+  .email-span {
     text-decoration: underline;
   }
   .contact-links {
