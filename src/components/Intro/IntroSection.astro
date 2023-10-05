@@ -7,10 +7,10 @@ import IntroDailyWork from '../Intro/IntroDailyWork';
   <div class='img-container'>
     <img class='image' src='/m_m_2_mobile.png' alt='man' />
   </div>
-  <h2 class='subheader'>
-    <span class='subheader-span-name'>Maciej Martowicz</span>
-    <span> #CoachSamoZuo</span>
-  </h2>
+  <div class='subheader'>
+    <h2 class="subheader-coach"> #Coach Samo Zuo</h2>
+    <p class='subheader-name'>Maciej Martowicz</p>
+  </div>
   <!-- about me section? -->
   <IntroDailyWork client:load />
   <a href='#offer' class='button-link'>Sprawdź</a>
@@ -32,18 +32,20 @@ import IntroDailyWork from '../Intro/IntroDailyWork';
     margin-top: 15px;
     text-align: center;
     padding: 15px 0px;
-    font-size: 1.7rem;
     font-family: var(--font_3);
     color: var(--base-white);
-    letter-spacing: 1px;
-    font-weight: 900;
+    
+    
   }
-
-  .subheader-span-name {
+.subheader-coach {
+  font-weight: 900;
+  letter-spacing: -.5px;
+}
+  .subheader-name {
     text-transform: uppercase;
     font-weight: 300;
     color: var(--base-orange);
-    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-size: clamp(.8rem, 2vw, 2.5rem);
   }
 
   .img-container {
@@ -73,9 +75,9 @@ import IntroDailyWork from '../Intro/IntroDailyWork';
     background-color: var(--base-orange);
   }
 
-  @media (min-width: 340px) {
+  @media (min-width: 350px) {
     .subheader {
-      font-size: clamp(2rem, 3vw, 4rem);
+      font-size: clamp(1.5rem, 3vw, 4rem);
     }
   }
 </style>

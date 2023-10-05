@@ -45,6 +45,7 @@
   color: var(--base-orange);
 }
 .link, .link-mobile {
+  font-family: var(--second-font);
   text-decoration: none;
   color: var(--base-white);
   font-size: 1rem;
@@ -64,18 +65,17 @@
   font-size: clamp(1.3rem, 3vw, 2.3rem);
 }
 .subheading {
-  text-align: center;
+  text-align: left;
   color: var(--base-orange);
-  font-family: var(--fancy-font);
+  font-family: var(--font-roboto);
   font-weight: 300;
-  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2.5vw, 2rem);
   line-height: 1rem;
   font-style: italic;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
 }
 
 .span_hash {
-  color: var(--base-orange);
   font-size: clamp(1.5rem, 3vw, 2.3rem);
 }
 .hamburger {

@@ -17,7 +17,7 @@
   --base-white: hsl(0, 0%, 100%);
   --base-grey: hsl(0, 7%, 76%);
   /* fonts */
-  --main-font: 'Roboto', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
   --second-font: 'Montserrat', sans-serif;
   --font_3: 'Merriweather', serif;
   --fancy-font: 'Montez', cursive;
