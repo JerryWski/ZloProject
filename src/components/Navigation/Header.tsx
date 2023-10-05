@@ -55,16 +55,16 @@ const Header: React.FC = () => {
         {matches && (
           <div className='nav-links-mobile'>
             <a className='link' href='/about'>
-              O mnie
+              O SamoZuo
             </a>
             <a className='link' href='/activities'>
-              Działalność
+              zuoDziałalność
             </a>
             <a className='link' href='/blog'>
-              Blog
+              zuoBlog
             </a>
             <a className='link' href='#contact'>
-              Kontakt
+              zuoKontakt
             </a>
           </div>
         )}
@@ -100,20 +100,20 @@ const Header: React.FC = () => {
             className='nav-links'
           >
             <a className='link-mobile' href='/about'>
-              O mnie
+              O SamoZuo
             </a>
             <a className='link-mobile' href='/activities'>
-              Działalność
+              zuoDziałalność
             </a>
             <a className='link-mobile' href='/blog'>
-              Blog
+              zuoBlog
             </a>
             <a
               className='link-mobile'
               href='#contact'
               onClick={handleMenuClick}
             >
-              Kontakt
+              zuoKontakt
             </a>
           </motion.div>
         )}

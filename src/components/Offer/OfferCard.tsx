@@ -28,7 +28,7 @@ const OfferCard: React.FC = () => {
               alt='work-icon'
             />
           </div>
-          <h3 className='offer-heading'>Aloha #Strategie</h3>
+          <h3 className='offer-heading'>zuoStrategie</h3>
           <p className='offer-text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             consequuntur quam doloremque
@@ -40,7 +40,7 @@ const OfferCard: React.FC = () => {
           <div className='image-container'>
             <img className='offer-img' src='/social2_big.png' alt='work-icon' />
           </div>
-          <h3 className='offer-heading'>Aloha #Academy</h3>
+          <h3 className='offer-heading'>zuoSzkolenia</h3>
           <p className='offer-text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             consequuntur quam doloremque
@@ -52,18 +52,50 @@ const OfferCard: React.FC = () => {
           <div className='image-container'>
             <img
               className='offer-img'
-              src='/consulting_big.png'
+              src='/company-struct-big.png'
               alt='work-icon'
             />
           </div>
-          <h3 className='offer-heading'>Aloha #Consulting</h3>
+          <h3 className='offer-heading'>zuoWarsztaty</h3>
           <p className='offer-text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
             consequuntur quam doloremque
           </p>
         </a>
       </div>
-    </motion.div>
+      <div className='offer'>
+        <a className='offer-link' href='/offers'>
+          <div className='image-container'>
+            <img
+              className='offer-img'
+              src='/mark-sales-big.png'
+              alt='work-icon'
+            />
+          </div>
+          <h3 className='offer-heading'>zuoAudyty</h3>
+          <p className='offer-text'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            consequuntur quam doloremque
+          </p>
+        </a>
+      </div>
+      <div className='offer'>
+        <a className='offer-link' href='/offers'>
+          <div className='image-container'>
+            <img
+              className='offer-img'
+              src='/managers-big.png'
+              alt='work-icon'
+            />
+          </div>
+          <h3 className='offer-heading'>zuoRekrutacja</h3>
+          <p className='offer-text'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+            consequuntur quam doloremque
+          </p>
+        </a>
+      </div>
+    </motion.div >
   );
 };
 
