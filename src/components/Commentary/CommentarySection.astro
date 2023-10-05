@@ -3,10 +3,13 @@ import SwiperModule from './SwiperModule';
 ---
 
 <section>
-  <h1 class='header'>To moi zuoKlienci</h1>
+  <div class="image-wrapper">
+    <img src="/speaker.png" alt="">
+  </div>
+  <h1 class='header'>To moi zuoKlienci...</h1>
   <p class='subheader'>
     "Oni nie są gapy - potrafią liczyć hajs i wiedzą gdzie i z kim robić
-    consultingi - gdzie jak włożą tam wyjmą z nawiązką :"
+    consultingi - gdzie jak włożą tam wyjmą z nawiązką"
   </p>
   <SwiperModule client:load />
   <div class='contact-wrapper'>
@@ -32,6 +35,14 @@ import SwiperModule from './SwiperModule';
     padding: 25px;
     background-color: rgb(229, 227, 233);
   }
+  .image-wrapper {
+    margin: 0 auto;
+    width: 100px;
+  }
+  .image-wrapper img {
+    display: block;
+    width: 100%;
+  }
   .header {
     color: var(--violet);
     font-family: var(--font_3);
@@ -39,7 +50,7 @@ import SwiperModule from './SwiperModule';
     letter-spacing: -0.5px;
     text-align: center;
     line-height: 46px;
-    margin-top: 50px;
+    margin-top: 20px;
     /* text-transform: uppercase; */
     font-weight: 900;
     padding-bottom: 10px;
@@ -49,8 +60,8 @@ import SwiperModule from './SwiperModule';
     margin-bottom: 25px;
     line-height: 23px;
     text-align: center;
-    font-weight: 400;
-    color: var(violet);
+    font-weight: 600;
+    color: var(--violet);
     font-style: italic;
   }
   .contact-wrapper {
