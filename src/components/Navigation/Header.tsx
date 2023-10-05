@@ -29,10 +29,15 @@ const Header: React.FC = () => {
       <nav className='nav-container'>
         <div className='logo-container'>
           <a href='/'>
+            
             <p className='heading'>
               <span className='span_hash'>#</span>CoachSamoZuo
             </p>
+            
             <p className='subheading'>makes a difference</p>
+            <div className='aloha-logo-container'>
+              <img src="/aloha-logo.png" alt="logo-icon" />
+            </div>
           </a>
         </div>
         <div className='contact-wrapper'>

@@ -33,6 +33,14 @@
   flex-direction: column;
   z-index: 9;
 }
+.aloha-logo-container {
+  margin: 5px auto 0px;
+  width: 50px;
+}
+.aloha-logo-container img {
+  width: 100%;
+  object-fit: contain;
+}
 .contact-wrapper {
   display: flex;
   margin-left: auto;
@@ -65,11 +73,11 @@
   font-size: clamp(1.3rem, 3vw, 2.3rem);
 }
 .subheading {
-  text-align: left;
+  text-align: center;
   color: var(--base-orange);
   font-family: var(--font-roboto);
   font-weight: 300;
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1.1rem, 2.5vw, 2rem);
   line-height: 1rem;
   font-style: italic;
   letter-spacing: 1px;
