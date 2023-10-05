@@ -6,9 +6,9 @@ const OfferCard: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0 1', '.53 1'],
+    offset: ['0 1', '.43 1'],
   });
-  const scaleProgress = useTransform(scrollYProgress, [0,1], [.7, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0,1], [.8, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0,1], [.6, 1]);
   return (
     <motion.div
