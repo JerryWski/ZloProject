@@ -18,7 +18,7 @@ import SwiperModule from './SwiperModule';
     </a>
     <div class='contact-links'>
       <a class='contact-link' href='tel:+48602649588'>
-        tel. <span>602-649-588</span> oraz na
+        tel. <span>602-649-588</span> lub
       </a>
       <a
         class='contact-social-icon'
@@ -71,13 +71,16 @@ import SwiperModule from './SwiperModule';
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: var(--light-violet);
   }
   .contact-wrapper :is(span) {
     color: var(--base-orange);
     font-size: clamp(0.9rem, 3vw, 4rem);
   }
   .contact-link {
-    color: var(--violet);
+    color: var(--base-white);
     font-family: var(--font_3);
     font-size: clamp(0.9rem, 3vw, 4rem);
   }
@@ -93,7 +96,7 @@ import SwiperModule from './SwiperModule';
     position: relative;
     font-size: 1rem;
     padding: 19px;
-    border-radius: 7px;
+    border-radius: 50%;
     background-color: var(--base-orange);
     transition: 0.3s background-color ease;
   }
