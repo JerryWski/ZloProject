@@ -57,10 +57,29 @@
   text-decoration: none;
   color: var(--base-white);
   font-size: 1rem;
+  transition: .3s all ease;
+}
+.link:hover {
+  color: var(--base-orange);
 }
 .link-mobile {
   color: var(--base-orange);
 }
+.link-mobile:hover {
+  color: var(--base-white);
+}
+a[href='#contact'] {
+  padding: 8px 15px;
+  background-color: var(--base-orange);
+  color: var(--base-white);
+  border-radius: 10px;
+  transition: .3s all ease;
+}
+a[href='#contact']:hover {
+  background-color: transparent;
+  outline: 1px solid var(--base-white);
+}
+
 .heading,
 .span_hash {
   text-align: left;
