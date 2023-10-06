@@ -33,11 +33,11 @@
   flex-direction: column;
   z-index: 9;
 }
-.aloha-logo-container {
+.aloha-logo-wrapper {
   margin: 5px auto 0px;
-  width: 50px;
+  width: 80px;
 }
-.aloha-logo-container img {
+.aloha-logo-wrapper img {
   width: 100%;
   object-fit: contain;
 }
@@ -66,18 +66,18 @@
   text-align: left;
   font-family: var(--main-font);
 }
-.heading {
+.logo-heading {
   color: var(--base-white);
   font-family: var(--font_3);
   font-weight: 700;
-  font-size: clamp(1.3rem, 3vw, 2.3rem);
+  font-size: 1.1rem;
 }
-.subheading {
+.logo-subheading {
   text-align: center;
   color: var(--base-orange);
   font-family: var(--font-roboto);
   font-weight: 300;
-  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  font-size: 1rem;
   line-height: 1rem;
   font-style: italic;
   letter-spacing: 1px;
@@ -116,10 +116,10 @@
 }
 
 @media (max-width: 350px) {
-  .heading {
+  .logo-heading {
     font-size: .9rem;
   };
-  .subheading {
+  .logo-subheading {
     font-size: 0.6rem;
   }
 }
