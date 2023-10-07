@@ -4,9 +4,11 @@ import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 import Card from '../layouts/mini-layouts/Card.astro';
 import { blogData } from '../blogData.js';
 import { formatBlogPosts } from '../utils/sortPosts'
+import { Image } from "astro:assets"
 
-const posts = await Astro.glob('./posts/*.md');
+const posts = await Astro.glob('../content/posts/*.md');
 const formattedPosts = formatBlogPosts(posts);
+
 ---
 
 <Layout title='#Blog'>
@@ -14,11 +16,12 @@ const formattedPosts = formatBlogPosts(posts);
 
   <section class='blog-section'>
     {
-      formattedPosts.map((post: { frontmatter: { title: string; excerpt: string; author: string; date: string | number | Date; slug: any; }; }, index: number) => (
+      formattedPosts.map((post: { frontmatter: { title: string; cover: string | any, excerpt: string; author: string; date: string | number | Date; slug: any; }; }, index: number) => (
         <Card>
           <div class='image-wrapper'>
             <img class='image-blog' src={blogData[index].image} alt='blog-image' />
           </div>
+          
           <div class='blog-frontmatter-wrapper'>
             <h2>{post.frontmatter.title}</h2>
             <p>{post.frontmatter.excerpt}</p>

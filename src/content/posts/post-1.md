@@ -2,12 +2,10 @@
 title: Od Zera do Bohaterki Biznesu
 slug: post-1
 excerpt: Historia przemiany Joasi, która pełna nadziei i determinacji, zdecydowała się opuścić etat i założyć własną firmę - brzmi znajomo?
-date: 2023-09-26
-image: {
-    src: '/blog2-mobile.webp'
-}
+date: 2023-08-26
 draft: false
 author: Maciej Martowicz
+
 ---
 
 Trzy lata temu, Joasia, pełna nadziei i determinacji, zdecydowała się opuścić etat i założyć własną firmę. Początki były trudne - brak klientów i dochodów sprawił, że każdy dzień był walką o przetrwanie. Nie miała łatwo. Dom, dzieci, ( Joasia samotnie wychowuje dwie córki ) kredyt hipoteczny. Wątpliwości i strach były jej codziennością. Jednak Joasia nie poddawała się!

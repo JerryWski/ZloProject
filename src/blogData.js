@@ -1,4 +1,5 @@
 export const blogData = [
+  
     {
       image: '/blog2-mobile.webp'
     },
