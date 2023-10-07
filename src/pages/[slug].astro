@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../layouts/mini-layouts/Card.astro';
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../content/*.md');
+  const posts = await Astro.glob('./posts/*.md');
 
   return posts.map((post) => ({
     params: {
@@ -17,13 +17,15 @@ export async function getStaticPaths() {
 const { Content, frontmatter } = Astro.props.post;
 ---
 
-<Layout title={frontmatter.title} >
+<Layout title={frontmatter.title}>
   <section>
     <div>
       <Card>
         <h2>{frontmatter.title}</h2>
-        <div class="author-info">
-            Autor: <strong>{frontmatter.author} </strong> | {new Date(frontmatter.date).toLocaleDateString()}
+        <div class='author-info'>
+          Autor: <strong>{frontmatter.author}</strong> | {
+            new Date(frontmatter.date).toLocaleDateString()
+          }
         </div>
         <Content />
         <a class='blog-link' href='/blog'>Powrót</a>
@@ -39,7 +41,6 @@ const { Content, frontmatter } = Astro.props.post;
   }
   h2 {
     font-size: clamp(2rem, 3vw, 4rem);
-    
   }
   .blog-link {
     width: fit-content;

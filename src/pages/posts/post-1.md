@@ -1,8 +1,12 @@
 ---
 title: Od Zera do Bohaterki Biznesu
-slug: astro-1-0
+slug: post-1
 excerpt: Historia przemiany Joasi, która pełna nadziei i determinacji, zdecydowała się opuścić etat i założyć własną firmę - brzmi znajomo?
 date: 2023-09-26
+image: {
+    src: '/blog2-mobile.webp'
+}
+draft: false
 author: Maciej Martowicz
 ---
 

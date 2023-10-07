@@ -1,9 +1,10 @@
 ---
 title: Astro 2.0
-slug: astro-2-0
+slug: post-3
 excerpt: Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsam eius
       similique iusto, omnis libero?
-date: 2023-09-25
+date: 2023-10-05
+draft: false
 author: Maciej Martowicz
 ---
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Est ipsam eius

@@ -3,8 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 import Card from '../layouts/mini-layouts/Card.astro';
 import { blogData } from '../blogData.js';
+import { formatBlogPosts } from '../utils/sortPosts'
 
-const posts = await Astro.glob('../content/*.md');
+const posts = await Astro.glob('./posts/*.md');
+const formattedPosts = formatBlogPosts(posts);
 ---
 
 <Layout title='#Blog'>
@@ -12,10 +14,10 @@ const posts = await Astro.glob('../content/*.md');
 
   <section class='blog-section'>
     {
-      posts.map((post, index) => (
+      formattedPosts.map((post: { frontmatter: { title: string; excerpt: string; author: string; date: string | number | Date; slug: any; }; }, index: number) => (
         <Card>
           <div class='image-wrapper'>
-            <img class='image-blog' src={blogData[index].image} alt='' />
+            <img class='image-blog' src={blogData[index].image} alt='blog-image' />
           </div>
           <div class='blog-frontmatter-wrapper'>
             <h2>{post.frontmatter.title}</h2>
@@ -37,12 +39,11 @@ const posts = await Astro.glob('../content/*.md');
     </a>
     <div class='contact-links'>
       <a class='contact-link' href='tel:+48602649588'>
-        tel. <span>602-649-588</span> oraz na
-      </a>
+        tel. <span>602-649-588</span> oraz na </a>
       <a
         class='contact-social-icon'
         href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
-      >
+       >
         <i class='fa-brands fa-linkedin-in'></i>
       </a>
     </div>
