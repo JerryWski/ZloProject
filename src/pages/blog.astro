@@ -4,7 +4,7 @@ import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 import handIcon from '../assets/hand2-white-icon.png';
-import camera from '../assets/camera.png';
+import camera from '../assets/camera-white.png';
 import PostList from '../components/PostList.astro';
 
 const posts = await getCollection('posts');
@@ -78,24 +78,23 @@ const posts = await getCollection('posts');
     background-color: var(--base-grey);
     position: relative;
     padding: 25px 25px 45px 25px;
+    background-image: url('../assets/m_art.png');
+    background-position: center;
     color: var(--violet);
-    opacity: .9;
   }
   .inter-section::before {
     content: "";
     position: absolute;
-    background-image: url('../assets/m_art.png');
-    background-position: center;
     top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.75;
-      z-index: -10;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(133, 85, 23, 0.25);
   }
   .inter-header {
     padding: 25px 0 0px 0;
     display: flex;
+    z-index: 10;
   }
   .inter-image {
     max-width: 10%;
@@ -109,6 +108,7 @@ const posts = await getCollection('posts');
     display: flex;
     flex-direction: column;
     padding: 25px;
+    z-index: 10;
   }
   .inter-link {
     margin: 20px;
@@ -119,7 +119,7 @@ h2 {
   font-size: clamp(2rem, 3vw, 4rem);
   line-height: 46px;
   font-family: var(--font_3);
-  color: var(--violet);
+  color: var(--base-white);
   display: flex;
   align-self: center;
   margin-left: 3px;
