@@ -26,12 +26,17 @@ const posts = await getCollection('posts');
   <article class='blog-section'>
     <PostList posts={posts} />
   </article>
-  <section class="inter-section">
-    
-      <Image class='inter-image' src={camera} alt='camera-icon'/>
-    
-    <h2 id="interviews">ZUOWywiady</h2>
-  </section>
+  <div class="inter-section">
+    <div class="inter-header">
+        <Image class='inter-image' src={camera} alt='camera-icon'/>
+            <h2 id="interviews">ZUOWywiady</h2>
+    </div>
+    <div class="inter-links">
+      <a class="inter-link" href="https://www.youtube.com/watch?v=kDhtDT_hN8M"><span> 1. W służbie sprzedaży</span> - Wywiad z Coachem SamoZuo przeprowadza Patryk Jasiński</a>
+      <a class="inter-link" href="https://www.youtube.com/watch?v=TKaxij_tFoI"><span>2. Strategia marketingu i sprzedaż na LinkedIn i Facebook'u</span> - Maciej Martowicz | BFI Talks</a>
+      <a class="inter-link" href="https://www.youtube.com/watch?v=sRzD6jriDJo&t=92s"><span>3. Na marce WŁASNEJ 1 MLN PLN w rok z LinkedIn</span> - CoachSamoZuo | Maciej Martowicz</a>
+    </div>
+  </div>
 </Layout>
 
 <style>
@@ -68,24 +73,46 @@ const posts = await getCollection('posts');
   }
   .inter-section {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     background-color: var(--base-grey);
-    padding: 25px;
+    padding: 25px 25px 45px 25px;
     color: var(--violet);
+  }
+  .inter-header {
+    padding: 25px 0 0px 0;
+    display: flex;
   }
   .inter-image {
     max-width: 10%;
     object-fit: contain;
-    height: fit-content;
-    
+    height: auto;
+  }
+  .inter-links {
+    margin-top: 20px;
+    background-color: var(--base-white);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  .inter-link {
+    margin: 20px;
+    color: var(--violet);
+    font-size: 1rem;
   }
 h2 {
   font-size: clamp(2rem, 3vw, 4rem);
   line-height: 46px;
   font-family: var(--font_3);
   color: var(--violet);
+  display: flex;
+  align-self: center;
   margin-left: 3px;
   letter-spacing: -1.5px;
+}
+span{
+  color: var(--base-orange);
+  padding-left: 0;
 }
   @keyframes animate {
     0% {
