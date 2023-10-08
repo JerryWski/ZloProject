@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import handIcon from '../assets/hand2-white-icon.png';
 import PostList from '../components/PostList.astro';
 
 const posts = await getCollection('posts');
@@ -11,10 +13,15 @@ const posts = await getCollection('posts');
   <AllSubpageHeader
     heading='#Blog'
     subtext=''
-    text='CoachSameZuo i jego złote myśli'
+    text='Coach Same Zuo i jego złote myśli'
     image='/blog3-icon.svg'
   />
 
+  <div id="#interviews" class='interview-wrapper'>
+    <span>|</span>
+    <a href=''>Wywiady z Samo Zuo</a>
+    <Image class='interview-img' src={handIcon} alt="hand-icon">
+  </div>
   <section class='blog-section'>
     <PostList posts={posts} />
   </section>
@@ -27,92 +34,47 @@ const posts = await getCollection('posts');
     display: flex;
     flex-direction: column;
   }
-  .image-blog {
-    border-radius: 7px;
-    width: 100%;
-  }
-  .blog-frontmatter-wrapper {
-    margin-top: 10px;
+  .interview-wrapper {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  .blog-author {
-    font-weight: bold;
-  }
-  h2 {
-    font-size: clamp(1.6rem, 3vw, 3rem);
-    line-height: 36px;
-    letter-spacing: 1px;
-  }
-  p {
-    font-size: clamp(1rem, 2vw, 2rem);
-    line-height: 23px;
-  }
-  .blog-author-wrapper {
-    opacity: 0.7;
-    font-size: 0.9rem;
-  }
-  .blog-link {
-    width: fit-content;
-    padding: 15px 25px;
-    color: var(--base-white);
-    border-radius: 7px;
-    background-color: var(--base-orange);
-    transition: 0.3s all ease;
-  }
-  .blog-link:hover {
-    color: var(--base-white);
-    outline: 1px solid var(--violet);
-    background-color: var(--violet);
-  }
-  .span-line {
-    width: 85%;
-    border-top: 1px solid var(--violet);
-  }
-  .contact-wrapper {
-    margin-top: 25px;
-    margin-left: 0;
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .contact-wrapper :is(span) {
-    color: var(--base-orange);
-    font-size: clamp(0.9rem, 3vw, 4rem);
-  }
-  .contact-link {
-    color: var(--violet);
+    gap: 10px;
+    align-items: center;
+    padding: 0px 0px 5px 0px;
     font-family: var(--font_3);
-    font-size: clamp(0.9rem, 3vw, 4rem);
+    background-color: var(--base-orange);
   }
-  .email-span {
+  .interview-wrapper a {
+    color: var(--base-white);
+    font-size: 1.1rem;
     text-decoration: underline;
   }
-  .contact-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  .interview-img {
+    margin-left: 6px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+    animation: animate 3s linear infinite forwards; 
   }
-  .contact-social-icon {
-    position: relative;
-    font-size: 1rem;
-    padding: 19px;
-    border-radius: 7px;
-    background-color: var(--base-orange);
-    transition: 0.3s background-color ease;
-  }
-  .contact-social-icon:hover {
-    background-color: var(--violet);
-  }
-  .fa-brands {
-    position: absolute;
-    padding: 19px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  span {
+    padding-left: 25px;
     color: var(--base-white);
+  }
+
+  @keyframes animate {
+    0% {
+        transform: rotate(-35deg);
+    }
+    25% {
+        transform: rotate(35deg);
+    }
+    50% {
+        transform: rotate(-35deg);
+    }
+    75% {
+        transform: rotate(35deg);
+    }
+    100% {
+        transform: rotate(-35deg);
+    }
   }
 </style>
