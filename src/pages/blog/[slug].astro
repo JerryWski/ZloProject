@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Card from '../../layouts/mini-layouts/Card.astro';
+import { Image } from 'astro:assets';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -30,6 +31,7 @@ const {Content} = await post.render()
     <div>
       <Card>
         <h2>{post.data.title}</h2>
+        <Image class='image-blog'  src={post.data.image} alt={post.data.title}/>
         <div class='author-info'>
           Autor: <strong>{post.data.author}</strong> | {
             new Date(post.data.date).toLocaleDateString()
@@ -49,6 +51,12 @@ const {Content} = await post.render()
   }
   h2 {
     font-size: clamp(2rem, 3vw, 4rem);
+  }
+  .image-blog {
+    border-radius: 7px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   .blog-link {
     width: fit-content;
