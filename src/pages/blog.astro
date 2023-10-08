@@ -19,13 +19,14 @@ const posts = await getCollection('posts');
   />
 
   <div id="#interviews" class='interview-wrapper'>
-    <span>|</span>
+    <span class="span-line">|</span>
     <a href='#interviews'>Wywiady z Samo Zuo</a>
     <Image class='interview-img' src={handIcon} alt="hand-icon">
   </div>
   <article class='blog-section'>
     <PostList posts={posts} />
   </article>
+
   <div class="inter-section">
     <div class="inter-header">
         <Image class='inter-image' src={camera} alt='camera-icon'/>
@@ -67,7 +68,7 @@ const posts = await getCollection('posts');
     object-fit: contain;
     animation: animate 3s linear infinite forwards; 
   }
-  span {
+  .span-line {
     padding-left: 25px;
     color: var(--base-white);
   }
@@ -75,8 +76,22 @@ const posts = await getCollection('posts');
     display: flex;
     flex-direction: column;
     background-color: var(--base-grey);
+    position: relative;
     padding: 25px 25px 45px 25px;
     color: var(--violet);
+    opacity: .9;
+  }
+  .inter-section::before {
+    content: "";
+    position: absolute;
+    background-image: url('../assets/m_art.png');
+    background-position: center;
+    top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+      z-index: -10;
   }
   .inter-header {
     padding: 25px 0 0px 0;
