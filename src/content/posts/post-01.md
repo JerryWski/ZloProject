@@ -1,8 +1,8 @@
 ---
 title: Moi Klienci w jednym miejscu
-slug: post-3
+slug: post-1
 excerpt: Kolejna konferencja na przestrzeni 2 tygodni gdzie było Mega Motoryzacyjnie. Tym razem miałem przyjemność brać udział...
-date: 2023-10-05
+date: 2023-09-30
 image: ./images/blog-image3-mobile.png
 feature: false
 draft: false

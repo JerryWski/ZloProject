@@ -1,8 +1,8 @@
 ---
 title: Od Zera do Bohaterki Biznesu
-slug: post-1
+slug: post-3
 excerpt: Historia przemiany Joasi, która pełna nadziei i determinacji, zdecydowała się opuścić etat i założyć własną firmę - brzmi znajomo?
-date: 2023-08-26
+date: 2023-09-20
 image: ./images/blog-image2.png
 draft: false
 feature: false
