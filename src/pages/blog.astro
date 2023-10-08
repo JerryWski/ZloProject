@@ -3,27 +3,35 @@ import Layout from '../layouts/Layout.astro';
 import AllSubpageHeader from '../layouts/mini-layouts/AllSubpageHeader.astro';
 import Card from '../layouts/mini-layouts/Card.astro';
 import { blogData } from '../blogData.js';
-import { formatBlogPosts } from '../utils/sortPosts'
-import { Image } from "astro:assets"
+import { getCollection } from 'astro:content';
+// import { formatBlogPosts } from '../utils/sortPosts'
+import { Image } from 'astro:assets';
+import PostList from '../components/PostList.astro';
 
-const posts = await Astro.glob('../content/posts/*.md');
-const formattedPosts = formatBlogPosts(posts);
+// const posts = await Astro.glob('../content/posts/*.md');
+const posts = await getCollection('posts');
 
+// const formattedPosts = formatBlogPosts(posts);
 ---
 
 <Layout title='#Blog'>
-  <AllSubpageHeader heading='#Blog' subtext='' text='CoachSameZuo i jego złote myśli' image='/blog3-icon.svg'/>
+  <AllSubpageHeader
+    heading='#Blog'
+    subtext=''
+    text='CoachSameZuo i jego złote myśli'
+    image='/blog3-icon.svg'
+  />
 
   <section class='blog-section'>
-    {
-      formattedPosts.map((post: { frontmatter: { title: string; cover: string | any, excerpt: string; author: string; date: string | number | Date; slug: any; }; }, index: number) => (
+    <PostList posts={posts}/>
+    <!-- {
+      posts.map((post, index: number) => (
         <Card>
-          <div class='image-wrapper'>
-            <img class='image-blog' src={blogData[index].image} alt='blog-image' />
-          </div>
-          
           <div class='blog-frontmatter-wrapper'>
             <h2>{post.frontmatter.title}</h2>
+            <div class='image-wrapper'>
+              <img class='image-blog' src={blogData[index].image} alt='blog-image' />
+            </div>
             <p>{post.frontmatter.excerpt}</p>
             <div class='blog-author-wrapper'>
               <span class="blog-author">{post.frontmatter.author}</span>
@@ -52,7 +60,7 @@ const formattedPosts = formatBlogPosts(posts);
     </div>
   </div>
       ))
-    }
+    } -->
   </section>
 </Layout>
 

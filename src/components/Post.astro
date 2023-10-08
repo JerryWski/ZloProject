@@ -1,0 +1,135 @@
+---
+import { Image } from 'astro:assets';
+import { type CollectionEntry } from 'astro:content';
+
+type Props = {
+  post: CollectionEntry<'posts'>;
+};
+const { post } = Astro.props;
+---
+
+<article class='blog-frontmatter-wrapper'>
+  <h2>{post.data.title}</h2>
+  <div class='image-wrapper'>
+    <Image class='image-blog' src={post.data.image} alt={post.data.title} />
+  </div>
+  <p class='body-text'>{post.data.excerpt}</p>
+  <div class='blog-author-wrapper'>
+    <p class='blog-author'>{post.data.author}</p>
+    <span> |</span>
+    <span>{new Date(post.data.date).toLocaleDateString()}</span>
+  </div>
+  <a class='blog-link' href={`/blog/${post.slug}`}>Czytaj dalej</a>
+
+  <span class='span-line'></span>
+  <div class='contact-wrapper'>
+    <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
+      <span class='email-span'>zuokontakt@coachsamozuo.com</span>
+    </a>
+    <div class='contact-links'>
+      <a class='contact-link' href='tel:+48602649588'>
+        tel. <span>602-649-588</span> oraz na
+      </a>
+      <a
+        class='contact-social-icon'
+        href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
+      >
+        <i class='fa-brands fa-linkedin-in'></i>
+      </a>
+    </div>
+  </div>
+</article>
+
+<style>
+  .blog-frontmatter-wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .image-wrapper {
+    max-width: 100%;
+  }
+  .image-blog {
+    border-radius: 7px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  h2 {
+    font-size: clamp(1.4rem, 3vw, 3rem);
+    line-height: 36px;
+    letter-spacing: 1px;
+  }
+  .blog-author-wrapper {
+    display: flex;
+    gap: 10px;
+    opacity: 0.7;
+    font-size: 0.9rem;
+  }
+  .blog-author {
+    font-weight: 700;
+  }
+  .blog-link {
+    width: fit-content;
+    padding: 15px 25px;
+    color: var(--base-white);
+    border-radius: 7px;
+    background-color: var(--base-orange);
+    transition: 0.3s all ease;
+  }
+  .blog-link:hover {
+    color: var(--base-white);
+    outline: 1px solid var(--violet);
+    background-color: var(--violet);
+  }
+  .span-line {
+    width: 85%;
+    border-top: 1px solid var(--violet);
+  }
+  .contact-wrapper {
+    margin-top: 15px;
+    margin-left: 0;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .contact-wrapper :is(span) {
+    color: var(--base-orange);
+    font-size: clamp(0.9rem, 3vw, 4rem);
+  }
+  .contact-link {
+    color: var(--violet);
+    font-family: var(--font_3);
+    font-size: clamp(0.9rem, 3vw, 4rem);
+  }
+  .email-span {
+    text-decoration: underline;
+  }
+  .contact-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contact-social-icon {
+    position: relative;
+    font-size: 1rem;
+    padding: 19px;
+    border-radius: 7px;
+    background-color: var(--base-orange);
+    transition: 0.3s background-color ease;
+  }
+  .contact-social-icon:hover {
+    background-color: var(--violet);
+  }
+  .fa-brands {
+    position: absolute;
+    padding: 19px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--base-white);
+  }
+</style>

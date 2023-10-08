@@ -1,0 +1,24 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Post from './Post.astro';
+import Card from '../layouts/mini-layouts/Card.astro';
+
+
+type Props = {
+  posts: CollectionEntry<'posts'>[];
+};
+
+const { posts } = Astro.props;
+---
+
+<section class='blog-section'>
+  {
+    posts.map((post) => (
+      <Card>
+        <Post post={post} />
+      </Card>
+    ))
+  }
+</section>
+
+<style></style>

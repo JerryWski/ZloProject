@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../layouts/mini-layouts/Card.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  const paths = posts.map((post) => {
+    return {
+      params: {
+        slug: post.slug,
+      },
+      props: {
+        post,
+      },
+    };
+  });
+  return paths;
+}
+type Props = {
+  post: CollectionEntry<'posts'>;
+};
+const { post } = Astro.props;
+const {Content} = await post.render()
+---
+
+<Layout title={post.data.title}>
+  <article>
+    <div>
+      <Card>
+        <h2>{post.data.title}</h2>
+        <div class='author-info'>
+          Autor: <strong>{post.data.author}</strong> | {
+            new Date(post.data.date).toLocaleDateString()
+          }
+        </div>
+        <Content />
+        <a class='blog-link' href='/blog'>Powrót</a>
+      </Card>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  article {
+    background-color: var(--base-white);
+    padding: 25px;
+  }
+  h2 {
+    font-size: clamp(2rem, 3vw, 4rem);
+  }
+  .blog-link {
+    width: fit-content;
+    margin-top: 20px;
+    padding: 15px 45px;
+    color: var(--base-white);
+    border-radius: 7px;
+    background-color: var(--base-orange);
+    transition: 0.3s all ease;
+  }
+  .author-info {
+    margin: 10px 0;
+  }
+</style>
