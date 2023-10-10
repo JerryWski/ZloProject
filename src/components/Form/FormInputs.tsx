@@ -1,9 +1,13 @@
-import React, { type HTMLInputTypeAttribute, type MutableRefObject } from 'react';
+import React, { type ChangeEvent, type HTMLInputTypeAttribute} from 'react';
 import './FormInputs.css';
 
 type Props = {
+  value: any;
   placeholder: string;
-  name: HTMLInputTypeAttribute
+  name: HTMLInputTypeAttribute;
+  label: string;
+  id: number;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void; 
 };
 
 const FormInputs: React.FC<Props> = (props) => {

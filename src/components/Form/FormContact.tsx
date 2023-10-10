@@ -53,7 +53,7 @@ const FormContact = () => {
     e.preventDefault();
   };
 
-  const onChange = (e) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 console.log(values);

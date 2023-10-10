@@ -78,7 +78,12 @@ const posts = await getCollection('posts');
     background-color: var(--base-grey);
     position: relative;
     padding: 25px 25px 45px 25px;
-    background-image: url('../assets/m_art.png');
+    /* background-image: url('../assets/m_art.png'); */
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../assets/m_art.png");
     background-position: center;
     color: var(--violet);
   }
