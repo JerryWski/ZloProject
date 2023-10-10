@@ -1,11 +1,11 @@
 ---
-
+import FormContact from '../Form/FormContact';
 ---
 
 <div class='contact-section' id='contact'>
   <div class='wrapper'>
     <h2 class='contact-header'>Kontakt</h2>
-    <form action=""></form>
+    <FormContact client:load />
     <p class='contact-text'>Tam mnie znajdziesz!</p>
     <div class='social-icons'>
       <a
@@ -42,7 +42,7 @@
     </div>
   </div>
   <div class='shortcuts'>
-    <h3 class="shortcuts-heading">Na skróty:</h3>
+    <h3 class='shortcuts-heading'>Na skróty:</h3>
     <a class='shortcuts-links' href='/about'> O SamoZUO</a>
     <a class='shortcuts-links' href='/activities'> zuoDziałalność</a>
     <a class='shortcuts-links' href='/blog'> zuoBlog</a>
@@ -55,7 +55,7 @@
     </a>
     <a href='/'>
       <div class='aloha-logo-container'>
-        <img src="/aloha-logo.png" alt="logo-icon" />
+        <img src='/aloha-logo.png' alt='logo-icon' />
       </div>
       <p class='logo-header'>
         <span class='span_hash'>#</span>CoachSamoZuo

@@ -70,7 +70,7 @@ export const clients = [
     text: '”Maciej Martowicz #CoachSamoZuo  Ty jesteś wart kasy z faktury + co najmniej drugie tyle. To są rzeczy, których ludziska nie robią. Muszą nimi dostać w #samłeb i wtedy zaczynają pieniądze zarabiać. 🙂”',
   },
   {
-    id: 8,
+    id: 11,
     image: './klimarczyk.png',
     header: 'Grzegorz Klimarczyk',
     subheader: 'CEO Open Nexus',
