@@ -1,14 +1,25 @@
-import React, { useRef, useState } from 'react';
+
+import React, { useState } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
 
+interface FormValues {
+  username: string ;
+  surname: string ;
+  company: string ;
+  address: string ;
+  phone: string ;
+  textareaValue: string;
+};
+
 const FormContact = () => {
-  const [values, setValues] = useState({
+  const [values, setValues] = useState<FormValues>({
     username: '',
     surname: '',
     company: '',
     address: '',
     phone: '',
+    textareaValue: '',
   });
 
   const inputs = [
@@ -49,16 +60,20 @@ const FormContact = () => {
     },
   ];
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
   };
 
+  const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-console.log(values);
+  console.log(values);
   return (
-    <form className='form-container' onSubmit={handleSubmit} method="POST">
+    <form className='form-container' onSubmit={handleSubmit} method='POST'>
       {inputs.map((input) => (
         <FormInputs
           key={input.id}
@@ -68,11 +83,13 @@ console.log(values);
         />
       ))}
       <textarea
-        name='textarea'
+        name='textareaValue'
         id=''
         placeholder='Skrobnij coś do mnie'
+        value={values.textareaValue}
+        onChange={handleTextAreaChange}
       ></textarea>
-      <button>Skrobnij do mnie</button>
+      <button className='form-button' type='submit'>Skrobnij do mnie</button>
     </form>
   );
 };
