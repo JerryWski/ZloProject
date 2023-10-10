@@ -3,3 +3,6 @@ input {
     margin: 10px 0px;
     outline: none;
 }
+input[type='number'] {
+    appearance: textfield;
+  }

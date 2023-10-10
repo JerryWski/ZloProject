@@ -56,11 +56,16 @@ const FormContact = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-
+console.log(values);
   return (
-    <form className='form-container' onSubmit={handleSubmit}>
+    <form className='form-container' onSubmit={handleSubmit} method="POST">
       {inputs.map((input) => (
-        <FormInputs key={input.id} {...input} value={values[input.name]} onChange={onChange} />
+        <FormInputs
+          key={input.id}
+          {...input}
+          value={values[input.name]}
+          onChange={onChange}
+        />
       ))}
       <textarea
         name='textarea'

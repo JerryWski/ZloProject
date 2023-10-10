@@ -7,10 +7,11 @@ type Props = {
 };
 
 const FormInputs: React.FC<Props> = (props) => {
+  const {label, onChange, id, ...inputProps } = props
   return (
     <div className='form-inputs'>
-      {/* <label htmlFor="username">Username</label> */}
-      <input name={props.name} placeholder={props.placeholder} />
+      <label>{label}</label>
+      <input {...inputProps} onChange={onChange}/>
     </div>
   );
 };
