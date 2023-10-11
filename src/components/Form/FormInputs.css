@@ -18,3 +18,15 @@
 .form-input[type='number'] {
   appearance: textfield;
 }
+.form-span {
+  display: none;
+  font-size: .8rem;
+  color: hsl(0, 54%, 48%);
+  padding-bottom: 3px;
+}
+.form-input:invalid[focused='true'] {
+  border: 1px solid hsl(0, 54%, 48%);
+}
+.form-input:invalid[focused='true'] ~ .form-span {
+  display: block;
+}

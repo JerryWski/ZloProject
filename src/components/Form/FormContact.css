@@ -1,6 +1,10 @@
-textarea {
+.text-area {
   resize: vertical;
   width: 100%;
+  outline: none;
+  border-radius: 7px;
+  padding: 7px;
+  border: 1px solid var(--base-grey);
   height: 100px;
 }
 .form-container{
@@ -11,6 +15,7 @@ textarea {
   color: var(--dark-violet);
   font-family: var(--font_3);
   width: 100%;
+  border: 2px solid var(--base-orange);
   border-radius: 7px;
 }
 .form-button {
@@ -20,11 +25,16 @@ textarea {
   height: 50px;
   border-radius: 7px;
   border: none;
-  background-color: var(--violet);
+  outline: none;
+  background-color: var(--base-orange);
   color: var(--base-white);
   font-family: var(--font_3);
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   margin-bottom: 20px;
+  transition: .3s background-color ease-in-out;
+}
+.form-button:hover{
+  background-color: var(--violet);
 }

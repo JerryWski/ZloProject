@@ -1,4 +1,8 @@
-import React, { type ChangeEvent, type HTMLInputTypeAttribute} from 'react';
+import React, {
+  useState,
+  type ChangeEvent,
+  type HTMLInputTypeAttribute,
+} from 'react';
 import './FormInputs.css';
 
 type Props = {
@@ -6,16 +10,29 @@ type Props = {
   name: HTMLInputTypeAttribute;
   label: string;
   id: number;
-  value: string; 
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void; 
+  value: string;
+  errorMessage: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 };
 
 const FormInputs: React.FC<Props> = (props) => {
-  const {label, onChange, id, ...inputProps } = props
+  const [focused, setFocused] = useState(false);
+  const { label, errorMessage, onChange, id, ...inputProps } = props;
+
+  const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+    setFocused(true);
+  };
   return (
     <div className='form-inputs'>
       <label className='form-label'>{label}</label>
-      <input className='form-input' {...inputProps} onChange={onChange}/>
+      <input
+        className='form-input'
+        {...inputProps}
+        onChange={onChange}
+        onBlur={handleFocus}
+        focused={focused.toString()}
+      />
+      <span className='form-span'>{errorMessage}</span>
     </div>
   );
 };
