@@ -29,7 +29,7 @@ const FormContact = () => {
       type: 'text',
       placeholder: 'Imię',
       errorMessage: 'Wpisz swoje imię',
-      label: 'username',
+      label: '',
       pattern: '^[A-Za-z0-9]{1,20}$',
       required: true,
     },
@@ -39,7 +39,7 @@ const FormContact = () => {
       type: 'text',
       placeholder: 'Nazwisko',
       errorMessage: 'Wpisz swoje nazwisko',
-      label: 'surname',
+      label: '',
       pattern: '^[A-Za-z0-9]{1,20}$',
       required: true,
     },
@@ -49,7 +49,7 @@ const FormContact = () => {
       type: 'text',
       placeholder: 'Nazwa Firmy',
       errorMessage: 'Podaj nazwę swojej firmy',
-      label: 'company',
+      label: '',
       required: true,
     },
     {
@@ -58,7 +58,7 @@ const FormContact = () => {
       type: 'text',
       placeholder: 'Adres WWW',
       errorMessage: 'Podaj adres swoje strony WWW',
-      label: 'address',
+      label: '',
     },
     {
       id: 5,
@@ -66,7 +66,7 @@ const FormContact = () => {
       type: 'number',
       placeholder: 'Telefon',
       errorMessage: 'Podaj swój telefon',
-      label: 'phone',
+      label: '',
       pattern: '^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$',
       required: true,
     },
@@ -74,6 +74,7 @@ const FormContact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // console.log(values);
   };
 
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -83,9 +84,9 @@ const FormContact = () => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  console.log(values);
+  // console.log(values);
   return (
-    <form className='form-container' onSubmit={handleSubmit} method='POST'>
+    <form className='form-container' onSubmit={handleSubmit} method='post'>
       {inputs.map((input) => (
         <FormInputs
           key={input.id}
