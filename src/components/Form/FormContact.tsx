@@ -1,16 +1,16 @@
-
 import React, { useState } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
 
 interface FormValues {
-  username: string ;
-  surname: string ;
-  company: string ;
-  address: string ;
-  phone: string ;
+  username: string;
+  surname: string;
+  company: string;
+  address: string;
+  phone: string;
   textareaValue: string;
-};
+  [key: string]: string;
+}
 
 const FormContact = () => {
   const [values, setValues] = useState<FormValues>({
@@ -83,13 +83,16 @@ const FormContact = () => {
         />
       ))}
       <textarea
+        className='text-area'
         name='textareaValue'
         id=''
         placeholder='Skrobnij coś do mnie'
         value={values.textareaValue}
         onChange={handleTextAreaChange}
       ></textarea>
-      <button className='form-button' type='submit'>Skrobnij do mnie</button>
+      <button className='form-button' type='submit'>
+        Skrobnij do mnie
+      </button>
     </form>
   );
 };

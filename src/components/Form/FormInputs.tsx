@@ -3,9 +3,10 @@ import './FormInputs.css';
 
 type Props = {
   placeholder: string;
-  name: HTMLInputTypeAttribute | unknown;
+  name: HTMLInputTypeAttribute;
   label: string;
   id: number;
+  value: string; 
   onChange: (event: ChangeEvent<HTMLInputElement>) => void; 
 };
 
