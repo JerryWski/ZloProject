@@ -16,7 +16,7 @@ interface FormValues {
 
 const FormContact = () => {
   const form = useRef<HTMLFormElement>(null);
-
+  const [isMessageSent, setIsMessageSent] = useState(false);
   const [values, setValues] = useState<FormValues>({
     username: '',
     email: '',
@@ -26,6 +26,17 @@ const FormContact = () => {
     textareaValue: '',
   });
 
+  const clearForm = () => {
+    setValues({
+      username: '',
+      email: '',
+      company: '',
+      address: '',
+      phone: '',
+      textareaValue: '',
+    });
+  };
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -34,13 +45,17 @@ const FormContact = () => {
         .sendForm(
           'service_q1yd8kj',
           'template_esmkt58',
-          form.current, // Użyj ref do odniesienia się do formularza
+          form.current,
           '-s7vlTiTNjFo6Rcnk',
         )
         .then(
           (result) => {
             console.log(result.text);
-            // Po udanym wysłaniu, wyczyść formularz
+            clearForm()
+            setIsMessageSent(true);
+            setTimeout(() => {
+              setIsMessageSent(false);
+            }, 3000);
           },
           (error) => {
             console.log(error.text);
@@ -98,11 +113,6 @@ const FormContact = () => {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(values);
-  };
-
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
@@ -112,33 +122,37 @@ const FormContact = () => {
   };
 
   return (
-    <form
-      ref={form}
-      onSubmit={sendEmail}
-      className='form-container'
-      action=''
-      method='POST'
-    >
-      {inputs.map((input) => (
-        <FormInputs
-          key={input.id}
-          {...input}
-          value={values[input.name]}
-          onChange={onChange}
-        />
-      ))}
-      <textarea
-        className='text-area'
-        name='textareaValue'
-        id=''
-        placeholder='Skrobnij coś do mnie'
-        value={values.textareaValue}
-        onChange={handleTextAreaChange}
-      ></textarea>
-      <button className='form-button' type='submit'>
-        Skrobnij do mnie
-      </button>
-    </form>
+    <>
+    {isMessageSent ? (<p className='sent-mail'>Wiadomość została wysłana. Odezwę się!</p>) :
+     
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className='form-container'
+        action=''
+        method='POST'
+      >
+        {inputs.map((input) => (
+          <FormInputs
+            key={input.id}
+            {...input}
+            value={values[input.name]}
+            onChange={onChange}
+          />
+        ))}
+        <textarea
+          className='text-area'
+          name='textareaValue'
+          id=''
+          placeholder='Skrobnij coś do mnie'
+          value={values.textareaValue}
+          onChange={handleTextAreaChange}
+        ></textarea>
+        <button className='form-button' type='submit'>
+          Skrobnij do mnie
+        </button>
+      </form>}
+    </>
   );
 };
 
