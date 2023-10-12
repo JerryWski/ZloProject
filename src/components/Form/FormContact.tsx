@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
-import { useForm } from '@formspree/react';
+import emailjs from '@emailjs/browser';
+// import { useForm } from '@formspree/react';
 
 interface FormValues {
   username: string;
@@ -14,6 +15,8 @@ interface FormValues {
 }
 
 const FormContact = () => {
+  const form = useRef<HTMLFormElement>(null);
+
   const [values, setValues] = useState<FormValues>({
     username: '',
     email: '',
@@ -23,10 +26,28 @@ const FormContact = () => {
     textareaValue: '',
   });
 
-  const [state, handle] = useForm('xqkvwqdn');
-  if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
-  }
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          'service_q1yd8kj',
+          'template_esmkt58',
+          form.current, // Użyj ref do odniesienia się do formularza
+          '-s7vlTiTNjFo6Rcnk',
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            // Po udanym wysłaniu, wyczyść formularz
+          },
+          (error) => {
+            console.log(error.text);
+          },
+        );
+    }
+  };
 
   const inputs = [
     {
@@ -89,11 +110,13 @@ const FormContact = () => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  
+
   return (
     <form
+      ref={form}
+      onSubmit={sendEmail}
       className='form-container'
-      action='https://formspree.io/f/xqkvwqdn'
+      action=''
       method='POST'
     >
       {inputs.map((input) => (
@@ -112,12 +135,7 @@ const FormContact = () => {
         value={values.textareaValue}
         onChange={handleTextAreaChange}
       ></textarea>
-      <button
-        disabled={state.submitting}
-        onSubmit={handle}
-        className='form-button'
-        type='submit'
-      >
+      <button className='form-button' type='submit'>
         Skrobnij do mnie
       </button>
     </form>

@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/netlify": "^3.0.2",
     "@astrojs/react": "^3.0.2",
+    "@emailjs/browser": "^3.11.0",
     "@formspree/react": "^2.5.1",
     "@types/react-dom": "^18.2.7",
     "astro": "^3.0.12",
