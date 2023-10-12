@@ -25,15 +25,6 @@ const FormContact = () => {
 
   const [state, handle] = useForm('xqkvwqdn');
   if (state.succeeded) {
-    // Po wysłaniu formularza zresetuj stan pól
-    setValues({
-      username: '',
-      email: '',
-      company: '',
-      address: '',
-      phone: '',
-      textareaValue: '',
-    });
     return <p>Thanks for joining!</p>;
   }
 
@@ -98,7 +89,7 @@ const FormContact = () => {
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  // console.log(values);
+  
   return (
     <form
       className='form-container'
