@@ -4,7 +4,7 @@ import FormInputs from './FormInputs';
 
 interface FormValues {
   username: string;
-  surname: string;
+  email: string;
   company: string;
   address: string;
   phone: string;
@@ -15,7 +15,7 @@ interface FormValues {
 const FormContact = () => {
   const [values, setValues] = useState<FormValues>({
     username: '',
-    surname: '',
+    email: '',
     company: '',
     address: '',
     phone: '',
@@ -89,7 +89,6 @@ const FormContact = () => {
     <form
       className='form-container'
       action='https://formsubmit.co/el/motawa'
-      
       method='POST'
     >
       {inputs.map((input) => (
