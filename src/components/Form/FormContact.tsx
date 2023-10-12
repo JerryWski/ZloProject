@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
+import { useForm } from '@formspree/react';
 
 interface FormValues {
   username: string;
@@ -21,6 +22,20 @@ const FormContact = () => {
     phone: '',
     textareaValue: '',
   });
+
+  const [state, handle] = useForm('xqkvwqdn');
+  if (state.succeeded) {
+    // Po wysłaniu formularza zresetuj stan pól
+    setValues({
+      username: '',
+      email: '',
+      company: '',
+      address: '',
+      phone: '',
+      textareaValue: '',
+    });
+    return <p>Thanks for joining!</p>;
+  }
 
   const inputs = [
     {
@@ -66,7 +81,7 @@ const FormContact = () => {
       placeholder: 'Telefon',
       errorMessage: 'Podaj swój telefon',
       label: '',
-      pattern: '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$',
+      pattern: '^[+]?[(]?[0-9]{3}[)]?[-s.]?[0-9]{3}[-s.]?[0-9]{4,6}$',
       required: true,
     },
   ];
@@ -85,10 +100,9 @@ const FormContact = () => {
   };
   // console.log(values);
   return (
-    
     <form
       className='form-container'
-      action='https://formsubmit.co/el/motawa'
+      action='https://formspree.io/f/xqkvwqdn'
       method='POST'
     >
       {inputs.map((input) => (
@@ -107,7 +121,12 @@ const FormContact = () => {
         value={values.textareaValue}
         onChange={handleTextAreaChange}
       ></textarea>
-      <button className='form-button' type='submit' onSubmit={handleSubmit}>
+      <button
+        disabled={state.submitting}
+        onSubmit={handle}
+        className='form-button'
+        type='submit'
+      >
         Skrobnij do mnie
       </button>
     </form>
