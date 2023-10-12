@@ -35,12 +35,11 @@ const FormContact = () => {
     },
     {
       id: 2,
-      name: 'surname',
-      type: 'text',
-      placeholder: 'Nazwisko',
-      errorMessage: 'Wpisz swoje nazwisko',
+      name: 'email',
+      type: 'email',
+      placeholder: 'Adres e-mail',
+      errorMessage: 'Wpisz swój adres e-mail',
       label: '',
-      pattern: '^[A-Za-z0-9]{1,20}$',
       required: true,
     },
     {
@@ -67,14 +66,14 @@ const FormContact = () => {
       placeholder: 'Telefon',
       errorMessage: 'Podaj swój telefon',
       label: '',
-      pattern: '^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$',
+      pattern: '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$',
       required: true,
     },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // console.log(values);
+    console.log(values);
   };
 
   const handleTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -86,7 +85,13 @@ const FormContact = () => {
   };
   // console.log(values);
   return (
-    <form className='form-container' onSubmit={handleSubmit} method='post'>
+    
+    <form
+      className='form-container'
+      action='https://formsubmit.co/el/motawa'
+      
+      method='POST'
+    >
       {inputs.map((input) => (
         <FormInputs
           key={input.id}
@@ -103,7 +108,7 @@ const FormContact = () => {
         value={values.textareaValue}
         onChange={handleTextAreaChange}
       ></textarea>
-      <button className='form-button' type='submit'>
+      <button className='form-button' type='submit' onSubmit={handleSubmit}>
         Skrobnij do mnie
       </button>
     </form>
