@@ -1,4 +1,4 @@
-import ReCAPTCHA from 'react-google-recaptcha';
+import Reaptcha from 'reaptcha';
 import React, { useState, useRef } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
@@ -121,6 +121,15 @@ const FormContact = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+  const [captchaToken, setCaptchaToken] = useState(null);
+  const captchaRef = useRef(null);
+
+  const verify = () => {
+    captchaRef.current.getResponse().then((res) => {
+      setCaptchaToken(res);
+    });
+  };
+
   return (
     <>
       {isMessageSent ? (
@@ -150,7 +159,9 @@ const FormContact = () => {
             onChange={handleTextAreaChange}
           ></textarea>
           <div className='recaptch'>
-            <ReCAPTCHA
+            <Reaptcha
+              ref={captchaRef}
+              onVerify={verify}
               sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'
               size='compact'
             />

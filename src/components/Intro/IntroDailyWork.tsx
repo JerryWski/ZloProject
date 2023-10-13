@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import { useInView } from 'framer-motion';
 import './IntroDailyWork.css';
 

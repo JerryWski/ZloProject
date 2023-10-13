@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+
 import './Header.css';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { motion } from 'framer-motion';
