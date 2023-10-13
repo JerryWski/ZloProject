@@ -23,6 +23,7 @@
     "swiper": "^10.2.0"
   },
   "devDependencies": {
+    "@types/node": "^20.8.5",
     "@types/react": "^18.2.21",
     "@types/react-google-recaptcha": "^2.1.6"
   }

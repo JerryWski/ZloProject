@@ -150,7 +150,10 @@ const FormContact = () => {
             onChange={handleTextAreaChange}
           ></textarea>
           <div className='recaptch'>
-            <ReCAPTCHA sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'size='compact'  />
+            <ReCAPTCHA
+              sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'
+              size='compact'
+            />
           </div>
           <button className='form-button' type='submit'>
             Skrobnij do mnie
