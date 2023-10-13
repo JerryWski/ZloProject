@@ -51,7 +51,7 @@ const FormContact = () => {
         .then(
           (result) => {
             console.log(result.text);
-            clearForm()
+            clearForm();
             setIsMessageSent(true);
             setTimeout(() => {
               setIsMessageSent(false);
@@ -123,37 +123,38 @@ const FormContact = () => {
 
   return (
     <>
-    {isMessageSent ? (<p className='sent-mail'>Wiadomość została wysłana. Odezwę się!</p>) :
-     
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        className='form-container'
-        action=''
-        method='POST'
-      >
-        {inputs.map((input) => (
-          <FormInputs
-            key={input.id}
-            {...input}
-            value={values[input.name]}
-            onChange={onChange}
-          />
-        ))}
-        <textarea
-          className='text-area'
-          name='textareaValue'
-          id=''
-          placeholder='Skrobnij coś do mnie'
-          value={values.textareaValue}
-          onChange={handleTextAreaChange}
-        ></textarea>
-        <div className="g-recaptcha" data-sitekey="6LcgJJwoAAAAAAMl91_90IJllhkQp6Fmq1ccm8UW"></div>
+      {isMessageSent ? (
+        <p className='sent-mail'>Wiadomość została wysłana. Odezwę się!</p>
+      ) : (
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className='form-container'
+          action=''
+          method='POST'
+        >
+          {inputs.map((input) => (
+            <FormInputs
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              onChange={onChange}
+            />
+          ))}
+          <textarea
+            className='text-area'
+            name='textareaValue'
+            id=''
+            placeholder='Skrobnij coś do mnie'
+            value={values.textareaValue}
+            onChange={handleTextAreaChange}
+          ></textarea>
 
-        <button className='form-button' type='submit'>
-          Skrobnij do mnie
-        </button>
-      </form>}
+          <button className='form-button' type='submit'>
+            Skrobnij do mnie
+          </button>
+        </form>
+      )}
     </>
   );
 };
