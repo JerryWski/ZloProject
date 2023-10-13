@@ -151,7 +151,7 @@ const FormContact = () => {
           ></textarea>
           <div className='recaptch'>
             <ReCAPTCHA
-              sitekey={process.env.REACT_APP_SITE_KEY || ''}
+              sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'
               size='compact'
             />
           </div>

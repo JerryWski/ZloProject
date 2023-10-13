@@ -137,7 +137,7 @@ a[href='#contact']:hover {
 @media (max-width: 350px) {
   .logo-heading {
     font-size: .9rem;
-  };
+  }
   .logo-subheading {
     font-size: 0.6rem;
   }
