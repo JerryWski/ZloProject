@@ -149,10 +149,12 @@ const FormContact = () => {
             value={values.textareaValue}
             onChange={handleTextAreaChange}
           ></textarea>
+          <div className='recaptch'>
+            <ReCAPTCHA sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'size='compact'  />
+          </div>
           <button className='form-button' type='submit'>
             Skrobnij do mnie
           </button>
-          <ReCAPTCHA sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'size='compact' />
         </form>
       )}
     </>
