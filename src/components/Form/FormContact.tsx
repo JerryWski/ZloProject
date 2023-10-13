@@ -122,13 +122,6 @@ const FormContact = () => {
   };
 
   const [captchaToken, setCaptchaToken] = useState(null);
-  const captchaRef = useRef(null);
-
-  const verify = () => {
-    captchaRef.current.getResponse().then((res) => {
-      setCaptchaToken(res);
-    });
-  };
 
   return (
     <>
@@ -160,8 +153,6 @@ const FormContact = () => {
           ></textarea>
           <div className='recaptch'>
             <Reaptcha
-              ref={captchaRef}
-              onVerify={verify}
               sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'
               size='compact'
             />
