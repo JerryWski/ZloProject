@@ -148,6 +148,8 @@ const FormContact = () => {
           value={values.textareaValue}
           onChange={handleTextAreaChange}
         ></textarea>
+        <div className="g-recaptcha" data-sitekey="6LcgJJwoAAAAAAMl91_90IJllhkQp6Fmq1ccm8UW"></div>
+
         <button className='form-button' type='submit'>
           Skrobnij do mnie
         </button>
