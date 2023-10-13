@@ -1,8 +1,8 @@
+import ReCAPTCHA from 'react-google-recaptcha';
 import React, { useState, useRef } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
 import emailjs from '@emailjs/browser';
-// import { useForm } from '@formspree/react';
 
 interface FormValues {
   username: string;
@@ -149,10 +149,10 @@ const FormContact = () => {
             value={values.textareaValue}
             onChange={handleTextAreaChange}
           ></textarea>
-
           <button className='form-button' type='submit'>
             Skrobnij do mnie
           </button>
+          <ReCAPTCHA sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'size='compact' />
         </form>
       )}
     </>
