@@ -1,4 +1,5 @@
-import Reaptcha from 'reaptcha';
+import Reaptcha, {  } from 'reaptcha';
+import ReaptchaRef from "reaptcha";
 import React, { useState, useRef } from 'react';
 import './FormContact.css';
 import FormInputs from './FormInputs';
@@ -121,6 +122,16 @@ const FormContact = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<ReaptchaRef | null>(null);
+
+  const verify = () => {
+    if (captchaRef.current) {
+      captchaRef.current.getResponse().then((res) => {
+        setCaptchaToken(res);
+      });
+    }
+  };
 
   return (
     <>
@@ -152,6 +163,8 @@ const FormContact = () => {
           ></textarea>
           <div className='recaptch'>
             <Reaptcha
+              ref={captchaRef}
+              onVerify={verify}
               sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'
               size='compact'
             />
