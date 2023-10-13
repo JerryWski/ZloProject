@@ -121,7 +121,6 @@ const FormContact = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
 
-  const [captchaToken, setCaptchaToken] = useState(null);
 
   return (
     <>
