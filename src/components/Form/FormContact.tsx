@@ -165,7 +165,7 @@ const FormContact = () => {
             <Reaptcha
               ref={captchaRef}
               onVerify={verify}
-              sitekey={import.meta.env.PUBLIC_ANYBODY}
+              sitekey='6LdBUpwoAAAAAMHGweBQD3q41tdgTXVrACjWXLcx'
               size='compact'
             />
           </div>
