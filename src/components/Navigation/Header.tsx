@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false);
   const [menuClicked, setMenuClicked] = useState(false);
-  const matches = useMediaQuery('(min-width: 768px)');
+  const matches = useMediaQuery('(min-width: 900px)');
 
   const handleMenuClick = () => {
     if (matches) {
@@ -58,7 +58,7 @@ const Header: React.FC = () => {
         </div>
         {/* check if we are on mobile or not */}
         {matches && (
-          <div className='nav-links-mobile'>
+          <div className='nav-links'>
             <a className='link' href='/about'>
               O SamoZuo
             </a>
@@ -102,7 +102,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ stiffness: 50 }}
             initial={{ opacity: 0, x: 45 }}
-            className='nav-links'
+            className='nav-links-mobile'
           >
             <a className='link-mobile' href='/about'>
               O SamoZuo

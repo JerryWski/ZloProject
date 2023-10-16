@@ -9,13 +9,13 @@
   max-width: 320px;
   padding: 10px;
 }
-.nav-links-mobile {
+.nav-links {
   display: flex;
   gap: 55px;
   align-items: center;
   font-family: var(--second-font);
 }
-.nav-links {
+.nav-links-mobile {
   position: fixed;
   top: 0;
   left: 0;
@@ -148,5 +148,15 @@ a[href='#contact']:hover {
   }
   .hamburger {
     padding: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-container {
+    justify-content: center;
+    
+  }
+  .contact-wrapper {
+    margin-left: 20px;
   }
 }
