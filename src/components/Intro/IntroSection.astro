@@ -1,19 +1,30 @@
 ---
 import IntroDailyWork from '../Intro/IntroDailyWork';
+import { Image } from 'astro:assets';
+import maciek_m from '../../assets/m_m2.png';
 ---
 
 <section class='intro-section'>
-  <h1 class='header'>Aloha!</h1>
-  <div class='img-container'>
-    <img class='image' src='/m_m_2_mobile.png' alt='man' />
-  </div>
-  <div class='subheader'>
-    <h2 class="subheader-coach"> #Coach Samo Zuo</h2>
-    <p class='subheader-name'>Maciej Martowicz</p>
+  <div class='intro-right-side'>
+    <h1 class='header'>Aloha!</h1>
+    <div class='img-container'>
+      <Image
+        class='image'
+        
+        src={maciek_m}
+        alt='man'
+      />
+    </div>
+    <div class='subheader'>
+      <h2 class='subheader-coach'>#Coach Samo Zuo</h2>
+      <p class='subheader-name'>Maciej Martowicz</p>
+    </div>
   </div>
   <!-- about me section? -->
-  <IntroDailyWork client:load />
-  <a href='#offer' class='button-link'>Sprawdź</a>
+  <div class='intro-left-side'>
+    <IntroDailyWork client:load />
+    <a href='#offer' class='button-link'>Sprawdź</a>
+  </div>
 </section>
 
 <style>
@@ -34,26 +45,27 @@ import IntroDailyWork from '../Intro/IntroDailyWork';
     padding: 15px 0px;
     font-family: var(--font_3);
     color: var(--base-white);
-    
-    
   }
-.subheader-coach {
-  font-weight: 900;
-  letter-spacing: -.5px;
-}
+  .subheader-coach {
+    font-weight: 900;
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    letter-spacing: -0.5px;
+  }
   .subheader-name {
     text-transform: uppercase;
     font-weight: 300;
     color: var(--base-orange);
-    font-size: clamp(.8rem, 2vw, 2.5rem);
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
   }
 
   .img-container {
     margin: 0px auto 0 auto;
-    width: 220px;
+    max-width: 280px;
   }
   .image {
     width: 100%;
+    height: auto;
+    object-fit: contain;
   }
   .button-link {
     width: fit-content;
@@ -78,6 +90,27 @@ import IntroDailyWork from '../Intro/IntroDailyWork';
   @media (min-width: 350px) {
     .subheader {
       font-size: clamp(1.5rem, 3vw, 4rem);
+    }
+  }
+  @media (min-width: 900px) {
+    .intro-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    .intro-left-side {
+      width: 40%;
+    }
+    .intro-right-side {
+      order: 1;
+      width: 40%;
+    }
+    .header {
+      margin-top: 0;
+    }
+    .subheader {
+      margin-top: 0;
     }
   }
 </style>

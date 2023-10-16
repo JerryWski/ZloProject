@@ -22,3 +22,10 @@
     text-align: left;
     font-family: var(--second-font);
   }
+
+  @media (min-width: 900px) {
+    .text-header {
+      font-size: 4rem;
+      line-height: normal;
+    }
+  }
