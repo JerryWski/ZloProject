@@ -25,6 +25,7 @@
 
   @media (min-width: 900px) {
     .text-header {
+      margin-top: 0;
       font-size: 4rem;
       line-height: normal;
     }

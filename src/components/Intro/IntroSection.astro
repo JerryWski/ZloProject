@@ -10,7 +10,6 @@ import maciek_m from '../../assets/m_m2.png';
     <div class='img-container'>
       <Image
         class='image'
-        
         src={maciek_m}
         alt='man'
       />
@@ -33,7 +32,7 @@ import maciek_m from '../../assets/m_m2.png';
     padding: 25px 25px 65px 25px;
   }
   .header {
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
     font-size: 6rem;
     color: var(--base-orange);
@@ -77,13 +76,13 @@ import maciek_m from '../../assets/m_m2.png';
     text-decoration: none;
     color: var(--base-white);
     padding: 10px 80px;
-    border: 1px solid var(--base-white);
+    outline: 1px solid var(--base-white);
     border-radius: 19px;
     font-family: var(--second-font);
     transition: 0.2s all ease-in;
   }
   .button-link:hover {
-    border: transparent;
+    outline: transparent;
     background-color: var(--base-orange);
   }
 
@@ -108,9 +107,13 @@ import maciek_m from '../../assets/m_m2.png';
     }
     .header {
       margin-top: 0;
+      letter-spacing: 12px;
     }
     .subheader {
       margin-top: 0;
+    }
+    .button-link {
+      font-size: 1.5rem;
     }
   }
 </style>
