@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import './Header.css';
 import { useMediaQuery } from '../../utils/useMediaQuery';
 import { motion } from 'framer-motion';
@@ -31,7 +30,7 @@ const Header: React.FC = () => {
         <div className='logo-container'>
           <a href='/'>
             <div className='aloha-logo-wrapper'>
-              <img src='aloha-logo.png' alt='logo-icon' />
+              <img src='/aloha-logo.png' alt='logo-icon' />
             </div>
             <p className='logo-heading'>
               <span className='span_hash'>#</span>CoachSamoZuo
