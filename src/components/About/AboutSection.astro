@@ -1,5 +1,7 @@
 ---
 import SectionTitles from '../../layouts/mini-layouts/SectionTitles.astro';
+import { Image } from 'astro:assets';
+import m_m5 from '../../assets/m_m5.png';
 ---
 
 <section class='about' id='about'>
@@ -7,40 +9,48 @@ import SectionTitles from '../../layouts/mini-layouts/SectionTitles.astro';
     titleSmall='O SamoZUO'
     titleBig='Przeczytaj, to lepiej mnie poznasz!'
   />
-  <div class='image-wrapper'>
-    <img class='image' src='/m_m5.png' alt='man' />
-  </div>
-  <div class='text-wrapper'>
-    <p class='quote'>
-      "The way you teach is more important than what you are teaching"
-    </p>
-    <p class='text'>
-      Jestem SamoZUO marketingu i sprzedaży B2B. Nie jestem agencją
-      marketingową. Nie jestem firmą reklamową - jakie pewnie znasz i z jakimi
-      się zetknąłeś
-    </p>
-    <p class='text'>
-      Moim klientom robię dobrze bo…dowożę im wyniki i pomagam ogarniać ich
-      firmę za hajs i cuba librę – ale zawsze dla nich i dla mnie.
-    </p>
-  </div>
-  <a href='/about' class='button-link'>Czytaj dalej</a>
-  <div class='social-wrapper'>
-    <a
-      href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
-      class='social-icon'
-      aria-label='Link to linkedin'><i class='fa-brands fa-linkedin-in'></i></a
-    >
-    <a
-      href='https://www.facebook.com/doradcaCoachconsultant'
-      class='social-icon'
-      aria-label='Link to Facebook'><i class='fa-brands fa-facebook-f'></i></a
-    >
-    <a
-      href='https://www.tiktok.com/@maciekmartowicz'
-      class='social-icon'
-      aria-label='Link to tik-tok'><i class='fa-brands fa-tiktok'></i></a
-    >
+  <div>
+    <div class='image-wrapper'>
+      <Image class='image' src={m_m5} alt='man' />
+    </div>
+    <div class='text-wrapper'>
+      <p class='quote'>
+        "The way you teach is more important than what you are teaching"
+      </p>
+      <p class='text'>
+        Jestem SamoZUO marketingu i sprzedaży B2B. Nie jestem agencją
+        marketingową. Nie jestem firmą reklamową - jakie pewnie znasz i z jakimi
+        się zetknąłeś. Wyciągam z czarnej dupy firmy małe, bardzo duże, średnie
+        i mikroprzedsiębiorców – ale to wtedy kiedy tam się znalazły.
+      </p>
+      <p class='text'>
+        Moim klientom robię dobrze bo…dowożę im wyniki i pomagam ogarniać ich
+        firmę za hajs i cuba librę – ale zawsze dla nich i dla mnie...<a
+          href='/about'
+          class='text-link'> Czytaj dalej</a
+        >
+      </p>
+      <!-- <a href='/about' class='button-link'>Czytaj dalej</a> -->
+      <div class='social-wrapper'>
+        <a
+          href='https://www.linkedin.com/in/coachsamozuo-maciek-aloha-marketing-0739a924a/'
+          class='social-icon'
+          aria-label='Link to linkedin'
+          ><i class='fa-brands fa-linkedin-in'></i></a
+        >
+        <a
+          href='https://www.facebook.com/doradcaCoachconsultant'
+          class='social-icon'
+          aria-label='Link to Facebook'
+          ><i class='fa-brands fa-facebook-f'></i></a
+        >
+        <a
+          href='https://www.tiktok.com/@maciekmartowicz'
+          class='social-icon'
+          aria-label='Link to tik-tok'><i class='fa-brands fa-tiktok'></i></a
+        >
+      </div>
+    </div>
   </div>
 </section>
 
@@ -56,7 +66,9 @@ import SectionTitles from '../../layouts/mini-layouts/SectionTitles.astro';
   }
   .image {
     border-radius: 7px;
+    object-fit: contain;
     width: 100%;
+    height: fit-content;
   }
   .quote {
     margin-top: 20px;
@@ -76,6 +88,16 @@ import SectionTitles from '../../layouts/mini-layouts/SectionTitles.astro';
     margin: 20px 0;
     font-weight: 500;
     color: var(--violet);
+  }
+  .text-link {
+    color: var(--base-orange);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: .2s all ease-in;
+  }
+  .text-link:hover {
+    
+    color: var(--light-violet);
   }
   .button-link {
     width: fit-content;
@@ -122,5 +144,47 @@ import SectionTitles from '../../layouts/mini-layouts/SectionTitles.astro';
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--base-white);
+  }
+
+  @media (min-width: 900px) {
+    .image-wrapper {
+      max-width: 600px;
+    }
+    .image {
+      width: 100%;
+      object-fit: contain;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 120px;
+    }
+    .text-wrapper {
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+      width: 600px;
+    }
+    .text {
+      font-size: clamp(0.9rem, 1vw, 1.5rem);
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .text::first-letter {
+      font-size: 2rem;
+      color: var(--base-orange);
+      font-weight: 900;
+    }
+    .quote {
+      text-align: left;
+      /* max-width: 500px; */
+      font-size: clamp(1.7rem, 2vw, 2.5rem);
+      opacity: 0.3;
+    }
+    .social-wrapper {
+      gap: 40px;
+      margin-top: 70px;
+    }
   }
 </style>

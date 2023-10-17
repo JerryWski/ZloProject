@@ -22,11 +22,17 @@
     text-align: left;
     font-family: var(--second-font);
   }
+  .intro :nth-child(3) {
+    display: none;
+  }
 
   @media (min-width: 900px) {
     .text-header {
       margin-top: 0;
       font-size: 4rem;
       line-height: normal;
+    }
+    .intro :nth-child(3) {
+      display: block;
     }
   }
