@@ -73,3 +73,14 @@
   text-align: center;
   font-family: var(--font_3);
 }
+@media (min-width: 900px) {
+  .offer-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .offer {
+    
+    width: 40%;
+    padding: 60px;
+  }
+}

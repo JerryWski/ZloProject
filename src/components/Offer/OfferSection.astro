@@ -9,44 +9,6 @@ import OfferCard from '../Offer/OfferCard';
     titleBig='Co mogę Ci zuoOferować'
   />
   <OfferCard client:load/>
-  <!-- <div class='offer-container'>
-    <div class='offer'>
-      <a class='offer-link' href='/offers'>
-        <div class='image-wrapper'>
-          <img class='offer-img' src='/strategy_big.png' alt='work-icon' />
-        </div>
-        <h3 class='offer-heading'>Aloha #Strategie</h3>
-        <p class='offer-text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          consequuntur quam doloremque
-        </p>
-      </a>
-    </div>
-    <div class='offer'>
-      <a class='offer-link' href='/offers'>
-        <div class='image-wrapper'>
-          <img class='offer-img' src='/social2_big.png' alt='work-icon' />
-        </div>
-        <h3 class='offer-heading'>Aloha #Academy</h3>
-        <p class='offer-text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          consequuntur quam doloremque
-        </p>
-      </a>
-    </div>
-    <div class='offer'>
-      <a class='offer-link' href='/offers'>
-        <div class='image-wrapper'>
-          <img class='offer-img' src='/consulting_big.png' alt='work-icon' />
-        </div>
-        <h3 class='offer-heading'>Aloha #Consulting</h3>
-        <p class='offer-text'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-          consequuntur quam doloremque
-        </p>
-      </a>
-    </div>
-  </div> -->
   <p class='contact-request'>Napisz do mnie lub zadzwoń!</p>
   <div class='contact-wrapper'>
     <a class="contact-link" href='tel:+48602649588'> tel: <span>+48 602 649 588</span></a>
@@ -135,7 +97,7 @@ import OfferCard from '../Offer/OfferCard';
   .contact-wrapper {
     margin-top: 10px;
     margin-left: 0;
-    max-width: fit-content ;
+    /* max-width: fit-content; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -145,7 +107,7 @@ import OfferCard from '../Offer/OfferCard';
     color: var(--base-orange);
     padding: 5px;
     font-family: var(--font_3);
-    font-size: clamp(.9rem, 3vw, 4rem);
+    font-size: clamp(.9rem, 2vw, 3rem);
   }
   .contact-link span {
     color: var(--violet);
@@ -155,9 +117,18 @@ import OfferCard from '../Offer/OfferCard';
     text-transform: uppercase;
     color: var(--base-orange);
     font-weight: 700;
-    font-size: clamp(1.1rem, 4vw, 4rem);
+    font-size: clamp(1.1rem, 2vw, 3rem);
     line-height: normal;
     letter-spacing: 1px;
     font-family: var(--font_3);
+  }
+  @media (min-width: 900px) {
+    .contact-wrapper {
+      align-items: center;
+    }
+    .contact-request {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>
