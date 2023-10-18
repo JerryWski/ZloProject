@@ -2,6 +2,7 @@
 import ContactSection from '../components/Contact/ContactSection.astro';
 import Header from '../components/Navigation/Header';
 import '../styles/global.css';
+import { ViewTransitions } from 'astro:transitions';
 
 
 interface Props {
@@ -24,9 +25,10 @@ const { title } = Astro.props as Props;
     />
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
-    <Header client:only />
+    <Header client:only="react" />
     <slot />
     <ContactSection />
     <script src='https://kit.fontawesome.com/4619b49638.js'></script>
