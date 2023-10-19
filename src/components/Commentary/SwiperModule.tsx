@@ -19,7 +19,6 @@ const SwiperModule = () => {
           slidesPerView: 2,
         },
       }}
-      centeredSlides
       slidesPerView={1}
       spaceBetween={10}
       centeredSlides={true}

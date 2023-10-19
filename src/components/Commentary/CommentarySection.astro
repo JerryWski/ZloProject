@@ -86,9 +86,10 @@ import SwiperModule from './SwiperModule';
     font-style: italic;
   }
   .contact-wrapper {
-    margin-top: 25px;
     display: flex;
     gap: 15px;
+    max-width: 400px;
+    margin:  25px auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -98,12 +99,12 @@ import SwiperModule from './SwiperModule';
   }
   .contact-wrapper :is(span) {
     color: var(--base-orange);
-    font-size: clamp(0.9rem, 3vw, 4rem);
+    font-size: clamp(0.9rem, 2vw, 1.8rem);
   }
   .contact-link {
     color: var(--base-white);
     font-family: var(--font_3);
-    font-size: clamp(0.9rem, 3vw, 4rem);
+    font-size: clamp(0.9rem, 2vw, 1.8rem);
   }
   .email-span {
     text-decoration: underline;
@@ -140,6 +141,13 @@ import SwiperModule from './SwiperModule';
   .subheader {
     max-width: 1200px;
     line-height: 42px;
+  }
+  .contact-wrapper {
+    max-width: 700px;
+  }
+  .contact-social-icon {
+    font-size: 1.4rem;
+    padding: 25px;
   }
  }
  @media (max-width: 410px) {

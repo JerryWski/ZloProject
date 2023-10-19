@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import blog1 from '../../assets/blog1.png'
 ---
 
 <section>
@@ -7,7 +8,7 @@
     Zajrzyj na mój <a href='/blog' class='header-link'>#Blog</a>
   </h2>
   <div class='image-wrapper'>
-    <img class='image' src='./blog1.png' alt='' />
+    <Image class='image' src={blog1} alt='sitting-man' />
   </div>
 </section>
 
@@ -42,5 +43,6 @@
   .image {
     display: flex;
     width: 100%;
+    height: auto;
   }
 </style>
