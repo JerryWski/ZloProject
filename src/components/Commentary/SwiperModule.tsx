@@ -13,6 +13,7 @@ const SwiperModule = () => {
         delay: 3500,
         disableOnInteraction: false,
       }}
+      slidesPerView={1}
       spaceBetween={30}
       centeredSlides={true}
       pagination={{

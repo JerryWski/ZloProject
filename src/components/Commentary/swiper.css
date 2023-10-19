@@ -52,10 +52,9 @@
   font-family: var(--font_3);
 }
 .swiper-subheader {
-  opacity: 0.6;
   color: var(--base-orange);
   margin-bottom: 5px;
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 .swiper-pagination-bullet-active {
   background: var(--violet) !important;
@@ -63,6 +62,29 @@
 
 @media (min-width: 345px) {
   .swiper-text {
-    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 900px) {
+  .swiper {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 370px;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-container {
+    width: 600px;
+  }
+  .swiper-text {
+    font-size: .8rem;
+    margin-top: 10px;
+    align-items: flex-start;
+    height: 100px;
   }
 }
