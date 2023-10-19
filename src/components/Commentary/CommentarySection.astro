@@ -35,15 +35,21 @@ import SwiperModule from './SwiperModule';
 <style>
   section {
     padding: 25px 25px 65px 25px;
-    background-color: rgb(229, 227, 233);
+    /* background-color: rgb(229, 227, 233); */
+    background-color: var(--base-white);
   }
   .commentary-intro {
-    background-image: url('../../assets/clients_m-full.png');
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.075),
+      rgba(247, 247, 247, 0.986)
+    ),
+    url("../../assets/clients_m-full.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     height: 250px;
     display: flex;
+    padding-top: 90px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -59,7 +65,7 @@ import SwiperModule from './SwiperModule';
   .header {
     color: var(--dark-violet);
     font-family: var(--font_3);
-    font-size: clamp(1.6rem, 3vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     letter-spacing: -0.5px;
     text-align: center;
     line-height: 46px;
@@ -74,7 +80,8 @@ import SwiperModule from './SwiperModule';
     line-height: 23px;
     text-align: center;
     font-weight: 600;
-    font-size: clamp(1rem, 3vw, 2rem);
+    font-family: var(--font_3);
+    font-size: clamp(.8rem, 3vw, 2rem);
     color: var(--dark-violet);
     font-style: italic;
   }
@@ -128,10 +135,11 @@ import SwiperModule from './SwiperModule';
  @media (min-width: 900px) {
   .commentary-intro {
     height: 350px;
-    /* display: flex; */
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+    padding-top: 110px;
+  }
+  .subheader {
+    max-width: 1200px;
+    line-height: 42px;
   }
  }
  @media (max-width: 410px) {
