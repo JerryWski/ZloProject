@@ -66,12 +66,9 @@
   }
 }
 @media (min-width: 900px) {
+
   .swiper {
-    width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 370px;
+    width: 100%;
   }
   .swiper-slide {
     display: flex;
@@ -79,7 +76,7 @@
     align-items: center;
   }
   .swiper-container {
-    width: 600px;
+    width: 400px;
   }
   .swiper-text {
     font-size: .8rem;

@@ -13,8 +13,15 @@ const SwiperModule = () => {
         delay: 3500,
         disableOnInteraction: false,
       }}
+      breakpoints={{
+        900: {
+          width: 1200,
+          slidesPerView: 2,
+        },
+      }}
+      centeredSlides
       slidesPerView={1}
-      spaceBetween={30}
+      spaceBetween={10}
       centeredSlides={true}
       pagination={{
         clickable: true,
