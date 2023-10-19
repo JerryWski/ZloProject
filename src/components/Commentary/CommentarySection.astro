@@ -3,14 +3,16 @@ import SwiperModule from './SwiperModule';
 ---
 
 <section>
-  <div class="img-wrapper">
-    <img src="/speaker.png" alt="speaker-icon">
+  <div class="commentary-intro">
+    <!-- <div class="img-wrapper">
+      <img src="/speaker.png" alt="speaker-icon">
+    </div> -->
+    <h1 class='header'>To moi zuoKlienci...</h1>
+    <p class='subheader'>
+      "Oni nie są gapy - potrafią liczyć hajs i wiedzą gdzie i z kim robić
+      consultingi - gdzie jak włożą tam wyjmą z nawiązką"
+    </p>
   </div>
-  <h1 class='header'>To moi zuoKlienci...</h1>
-  <p class='subheader'>
-    "Oni nie są gapy - potrafią liczyć hajs i wiedzą gdzie i z kim robić
-    consultingi - gdzie jak włożą tam wyjmą z nawiązką"
-  </p>
   <SwiperModule client:load />
   <div class='contact-wrapper'>
     <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
@@ -35,6 +37,17 @@ import SwiperModule from './SwiperModule';
     padding: 25px 25px 65px 25px;
     background-color: rgb(229, 227, 233);
   }
+  .commentary-intro {
+    background-image: url('../../assets/clients_m-full.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .img-wrapper {
     width: 70px;
     margin: 0 auto;
@@ -44,9 +57,9 @@ import SwiperModule from './SwiperModule';
     opacity: .5;
   }
   .header {
-    color: var(--violet);
+    color: var(--dark-violet);
     font-family: var(--font_3);
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(1.6rem, 3vw, 3rem);
     letter-spacing: -0.5px;
     text-align: center;
     line-height: 46px;
@@ -61,7 +74,8 @@ import SwiperModule from './SwiperModule';
     line-height: 23px;
     text-align: center;
     font-weight: 600;
-    color: var(--violet);
+    font-size: clamp(1rem, 3vw, 2rem);
+    color: var(--dark-violet);
     font-style: italic;
   }
   .contact-wrapper {
@@ -111,5 +125,19 @@ import SwiperModule from './SwiperModule';
     transform: translate(-50%, -50%);
     color: var(--base-white);
   }
- 
+ @media (min-width: 900px) {
+  .commentary-intro {
+    height: 350px;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+  }
+ }
+ @media (max-width: 410px) {
+  .commentary-intro {
+    background-position: 0 90px;
+    /* background-size: cover; */
+  }
+ }
 </style>

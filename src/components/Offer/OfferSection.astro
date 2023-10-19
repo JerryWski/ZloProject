@@ -8,12 +8,14 @@ import OfferCard from '../Offer/OfferCard';
     titleSmall='ZuoDziałalność'
     titleBig='Co mogę Ci zuoOferować'
   />
-  <OfferCard client:load/>
+  <OfferCard client:load />
   <p class='contact-request'>Napisz do mnie lub zadzwoń!</p>
   <div class='contact-wrapper'>
-    <a class="contact-link" href='tel:+48602649588'> tel: <span>+48 602 649 588</span></a>
-    <a class="contact-link" href='mailto:kontakt@maciejmartowicz.pl'>
-    <span>zuokontakt@coachsamozuo.com</span>
+    <a class='contact-link' href='tel:+48602649588'>
+      tel: <span>+48 602 649 588</span></a
+    >
+    <a class='contact-link' href='mailto:kontakt@maciejmartowicz.pl'>
+      <span>zuokontakt@coachsamozuo.com</span>
     </a>
   </div>
 </section>
@@ -107,10 +109,10 @@ import OfferCard from '../Offer/OfferCard';
     color: var(--base-orange);
     padding: 5px;
     font-family: var(--font_3);
-    font-size: clamp(.9rem, 2vw, 3rem);
+    font-size: clamp(0.9rem, 2vw, 3rem);
   }
   .contact-link span {
-    color: var(--violet);
+    color: var(--light-violet);
   }
   .contact-request {
     margin-bottom: 5px;
@@ -124,12 +126,20 @@ import OfferCard from '../Offer/OfferCard';
   }
   @media (min-width: 900px) {
     .contact-wrapper {
+      font-size: clamp(1.3rem, 1.7vw, 2.9rem);
       align-items: center;
       margin-bottom: 60px;
     }
     .contact-request {
       width: 100%;
       text-align: center;
+      font-size: clamp(1.3rem, 1.7vw, 2.9rem);
+    }
+    .contact-link span {
+      transition: 0.3s all ease;
+    }
+    .contact-link span:hover {
+      color: var(--violet);
     }
   }
 </style>
