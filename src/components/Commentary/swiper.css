@@ -42,7 +42,6 @@
   align-items: center;
   color: var(--violet);
   height: 190px;
-  padding: 0px;
   font-size: clamp(0.7rem, 2vw, 1.5rem);
 }
 .swiper-header {
@@ -82,6 +81,5 @@
     font-size: .8rem;
     margin-top: 10px;
     align-items: flex-start;
-    height: 100px;
   }
 }
